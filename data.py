@@ -1,12 +1,24 @@
 from __future__ import annotations
 import datetime as dt
+import pandas as pd
+from copy import deepcopy
+
+ELO_DIFF_SCALING = 400.0
+ELO_K = 20.0
+ELO_K_NEWBIE_ADD = 50.0
+ELO_K_NEWBIE_SCALE = 2.0
+EMA_MIN_GAIN = 50.0
+EMA_MAX_GAIN = 500.0
+EMA_MIN_GAMES_PER_MONTH = 4
 
 class Round:
-    def __init__(self, winner: str|None, discarder: str|None, hand_points: int, penalties: dict[str, int]|None = {}):
+    def __init__(self, winner: str|None, discarder: str|None, hand_points: int, penalties: dict[str, int]|None = None):
         self.winner = winner
         self.discarder = discarder
         self.hand_points = hand_points
-        self.penalties = penalties
+        if penalties is None:
+            self.penalties = {}
+        self.penalties = deepcopy(penalties)
     
     def to_dict(self) -> dict:
         return {
@@ -30,15 +42,27 @@ class Round:
 
 class Game:
     def __init__(self, players: list[str], end_points: list[int], date: dt.datetime, rounds: list[Round]|None = None):
-        self.players = players
-        self.end_points = end_points
+        self.players = deepcopy(players)
+        self.end_points = deepcopy(end_points)
         self.date = date
-        self.rounds = rounds
+        self.rounds = deepcopy(rounds)
 
     def __eq__(self, other: Game) -> bool:
         if not(isinstance(other, Game)):
             return NotImplemented
-        return self.players == other.players and self.end_points == other.end_points and self.date == other.date
+        return (
+            self.players == other.players and
+            self.end_points == other.end_points and
+            self.date == other.date
+        )
+    
+    def __lt__(self, other: Game) -> bool:
+        if not(isinstance(other, Game)):
+            return NotImplemented
+        return (
+            (self.date, self.players, self.end_points) <
+            (other.date, other.players, other.end_points)
+        )
     
     def to_dict(self) -> dict:
         return {
@@ -72,8 +96,15 @@ class Player:
             return self.name == other.name
         return NotImplemented
 
-    def __hash__(self):
+    def __hash__(self) -> int:
         return hash(self.name)
+    
+    def __lt__(self, other: str|Player) -> bool:
+        if isinstance(other, str):
+            return self.name < other
+        elif isinstance(other, Player):
+            return self.name < other.name
+        return NotImplemented
     
     def to_dict(self) -> dict:
         return {
@@ -90,12 +121,13 @@ class Player:
 
 class Data:
     def __init__(self, games: list[Game] = [], players: list[Player] = [], aliases: dict[str, str] = {}):
-        self.games = games
-        self.players = players
-        self.aliases = aliases
+        self.games = deepcopy(games)
+        self.players = deepcopy(players)
+        self.aliases = deepcopy(aliases)
         self.name_to_player_id = {}
         for i in range(len(players)):
             self.name_to_player_id[players[i].name] = i
+        self._update_elo()
     
     def add_game(self, game: Game) -> tuple[int, str]:
         if game in self.games:
@@ -109,6 +141,7 @@ class Data:
             return (3, "Somme non nulle")
         
         self.games.append(game)
+        self._update_elo()
         return (0, "")
 
     def add_player(self, player: Player) -> tuple[int, str]:
@@ -120,6 +153,7 @@ class Data:
         self.players.append(player)
         self.aliases[player.name] = player.name
         self.name_to_player_id[player.name] = len(self.players) - 1
+        self._update_elo()
         return (0, "")
 
     def add_alias(self, alias: str, player_name: str) -> tuple[int, str]:
@@ -130,6 +164,83 @@ class Data:
 
         self.aliases[alias] = player_name
         return (0, "")
+
+    def _update_elo(self):
+        """
+        Format de 'elo' et 'nb_games' : tab[num game][player name]
+        """
+        self.games = sorted(self.games)
+        current_elo = {}
+        current_nb_games = {}
+        for p in self.players:
+            current_elo[p.name] = p.base_elo
+            current_nb_games[p.name] = 0
+        self.elo = []
+        self.nb_games = []
+
+        for game in self.games:
+            rank_points = pd.Series(game.end_points).rank()
+            game_points = {}
+            for i in range(len(game.players)):
+                game_points[game.players[i]] = float(rank_points[i]) - 1
+            
+            expected_points = {}
+            for alias1 in game.players:
+                expected_points[alias1] = 0.0
+                for alias2 in game.players:
+                    if alias1 != alias2:
+                        name1 = self.aliases[alias1]
+                        name2 = self.aliases[alias2]
+                        expected_points[alias1] += 1.0 / (1.0 + 10 ** ((current_elo[name2] - current_elo[name1]) / ELO_DIFF_SCALING))
+            
+            elo_gain = {}
+            for alias in game.players:
+                name = self.aliases[alias]
+                coef = ELO_K + ELO_K_NEWBIE_ADD / (ELO_K_NEWBIE_SCALE + current_nb_games[name])
+                elo_gain[alias] = coef * (game_points[alias] - expected_points[alias])
+            
+            for alias in game.players:
+                name = self.aliases[alias]
+                current_elo[name] += elo_gain[alias]
+                current_nb_games[name] += 1
+            self.elo.append(deepcopy(current_elo))
+            self.nb_games.append(deepcopy(current_nb_games))
+
+            # print("game points :", game_points)
+            # print("expected points :", expected_points)
+            # print("elo gain :", elo_gain)
+
+    def _update_ema(self):
+        """
+        Stats for EMA : last elo, nb games played, ema gain, total ema, rank
+        """
+        self._update_elo()
+        last_nb_games = {}
+        current_ema_stats = {}
+        for p in self.players:
+            last_nb_games[p.name] = 0
+            current_ema_stats[p.name] = {
+                'elo': p.base_elo,
+                'nb games': 0,
+                'ema gain': 0,
+                'total ema': 0,
+                'rank': -1
+            }
+        self.ema = []
+
+        for igame in range(len(self.games)):
+            if igame == len(self.games)-1 or self._get_num_month(igame) != self._get_num_month(igame+1):
+                for p in self.players:
+                    current_ema_stats[p.name]['elo'] = self.elo[igame][p.name]
+                    current_ema_stats[p.name]['nb games'] = self.nb_games[igame][p.name] - last_nb_games[p.name]
+                    last_nb_games[p.name] = self.nb_games[igame][p.name]
+
+                    ##### TODO : Calculer rang et mettre a jour EMA
+
+    def _get_num_month(self, igame: int) -> int:
+        """ Returns the number of the month with year included """
+        game = self.games[igame]
+        return game.date.year * 12 + game.date.month
 
     def to_dict(self) -> dict:
         return {
