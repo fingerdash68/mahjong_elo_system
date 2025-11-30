@@ -127,7 +127,7 @@ class Data:
         self.name_to_player_id = {}
         for i in range(len(players)):
             self.name_to_player_id[players[i].name] = i
-        self._update_elo()
+        self._update_ema()
     
     def add_game(self, game: Game) -> tuple[int, str]:
         if game in self.games:
@@ -141,7 +141,7 @@ class Data:
             return (3, "Somme non nulle")
         
         self.games.append(game)
-        self._update_elo()
+        self._update_ema()
         return (0, "")
 
     def add_player(self, player: Player) -> tuple[int, str]:
@@ -153,7 +153,7 @@ class Data:
         self.players.append(player)
         self.aliases[player.name] = player.name
         self.name_to_player_id[player.name] = len(self.players) - 1
-        self._update_elo()
+        self._update_ema()
         return (0, "")
 
     def add_alias(self, alias: str, player_name: str) -> tuple[int, str]:
@@ -206,10 +206,6 @@ class Data:
             self.elo.append(deepcopy(current_elo))
             self.nb_games.append(deepcopy(current_nb_games))
 
-            # print("game points :", game_points)
-            # print("expected points :", expected_points)
-            # print("elo gain :", elo_gain)
-
     def _update_ema(self):
         """
         Stats for EMA : last elo, nb games played, ema gain, total ema, rank
@@ -235,7 +231,25 @@ class Data:
                     current_ema_stats[p.name]['nb games'] = self.nb_games[igame][p.name] - last_nb_games[p.name]
                     last_nb_games[p.name] = self.nb_games[igame][p.name]
 
-                    ##### TODO : Calculer rang et mettre a jour EMA
+                list_elos = []
+                for p in self.players:
+                    if current_ema_stats[p.name]['nb games'] > 0:
+                        list_elos.append((current_ema_stats[p.name]['elo'], p.name))
+                    else:
+                        current_ema_stats[p.name]['rank'] = -1
+                list_elos.sort()
+                for pos in range(len(list_elos)):
+                    name = list_elos[pos][1]
+                    current_ema_stats[name]['rank'] = len(list_elos) - pos
+                
+                for p in self.players:
+                    rank = current_ema_stats[p.name]['rank']
+                    pos = len(list_elos) - rank
+                    nb_games = current_ema_stats[p.name]['nb games']
+                    current_ema_stats[p.name]['ema gain'] = (min(nb_games, EMA_MIN_GAMES_PER_MONTH) / EMA_MIN_GAMES_PER_MONTH) * (EMA_MIN_GAIN + (EMA_MAX_GAIN - EMA_MIN_GAIN) * (pos / (len(list_elos) - 1)))
+                    current_ema_stats[p.name]['total ema'] = current_ema_stats[p.name]['total ema'] + current_ema_stats[p.name]['ema gain']
+                
+                self.ema.append(deepcopy(current_ema_stats))
 
     def _get_num_month(self, igame: int) -> int:
         """ Returns the number of the month with year included """

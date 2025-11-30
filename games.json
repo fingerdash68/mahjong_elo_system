@@ -1,0 +1,220 @@
+{
+    "games": [
+        {
+            "players": [
+                "Kevin 52",
+                "Ghislaine 51",
+                "Delphine 99",
+                "Christophe 25"
+            ],
+            "end_points": [
+                248,
+                35,
+                -201,
+                -82
+            ],
+            "date": "2025-10-04T14:45:27",
+            "rounds": [
+                {
+                    "winner": "Delphine 99",
+                    "discarder": null,
+                    "hand_points": "9",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin 52",
+                    "discarder": "Delphine 99",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Ghislaine 51",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin 52",
+                    "discarder": "Ghislaine 51",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin 52",
+                    "discarder": null,
+                    "hand_points": "30",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin 52",
+                    "discarder": "Ghislaine 51",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe 25",
+                    "discarder": "Kevin 52",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe 25",
+                    "discarder": "Delphine 99",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin 52",
+                    "discarder": null,
+                    "hand_points": "17",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin 52",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe 25",
+                    "discarder": "Delphine 99",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Ghislaine 51",
+                    "discarder": null,
+                    "hand_points": "9",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Ghislaine 51",
+                    "discarder": "Delphine 99",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": "Ghislaine 51",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Kevin 52": "0",
+                        "Ghislaine 51": "0",
+                        "Delphine 99": "0",
+                        "Christophe 25": "0"
+                    }
+                }
+            ]
+        }
+    ],
+    "players": [
+        {
+            "name": "Kevin",
+            "base_elo": 1200
+        },
+        {
+            "name": "Christophe",
+            "base_elo": 1000
+        },
+        {
+            "name": "Delphine",
+            "base_elo": 1000
+        },
+        {
+            "name": "Ghislaine",
+            "base_elo": 900
+        },
+        {
+            "name": "Guilhem",
+            "base_elo": 1100
+        }
+    ],
+    "aliases": {
+        "Kevin": "Kevin",
+        "Christophe": "Christophe",
+        "Delphine": "Delphine",
+        "Ghislaine": "Ghislaine",
+        "Guilhem": "Guilhem",
+        "Kev": "Kevin",
+        "Kevin 52": "Kevin",
+        "Christophe 25": "Christophe",
+        "Delphine 99": "Delphine",
+        "Ghislaine 51": "Ghislaine"
+    }
+}

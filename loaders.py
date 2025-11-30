@@ -31,7 +31,6 @@ class DataLoader:
             for name in names:
                 penalties[name] = df['Penalty ' + name].iloc[row_num]
             rounds.append(Round(winner=winner, discarder=discarder, hand_points=hand_points, penalties=penalties))
-        rounds = []
         
         # Ajout partie
         return self._try_to_add_game(data, names, end_points, date, rounds)
