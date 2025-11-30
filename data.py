@@ -1,6 +1,6 @@
 from __future__ import annotations
 import datetime as dt
-import pandas as pd
+import pandas as pd # type: ignore
 from copy import deepcopy
 
 ELO_DIFF_SCALING = 400.0
