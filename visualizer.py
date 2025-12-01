@@ -63,4 +63,59 @@ class Visualizer:
             fig_index += 1
 
     def plot_emas(self, save_file: str = ""):
-        pass
+        # Prepare save mode
+        save_mode = None
+        if save_file != "":
+            if save_file.endswith("/") or save_file.endswith("\\"):
+                save_mode = "directory"
+                os.makedirs(save_file, exist_ok=True)
+            else:
+                save_mode = "prefix"
+
+        # Prepare the table
+        months_name = ['Jan', 'Fev', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Dec']
+        for id_month, ema_stats in self.data.ema:
+            month = (id_month - 1) % 12
+            year = (id_month - 1) // 12
+            date_name = months_name[month] + " " + str(year)
+
+            ema_table = []
+            for name, stats in ema_stats.items():
+                if stats['rank'] != -1:
+                    ema_table.append([
+                        name,
+                        round(stats['elo'], 1),
+                        stats['rank'],
+                        stats['nb games'],
+                        round(stats['ema gain']),
+                        round(stats['total ema'])])
+            ema_table.sort(
+                key = lambda x : x[0], # Name sorting
+                reverse = False
+            )
+            ema_table.insert(0, [date_name, 'Elo', 'Rang', 'Nb parties', 'EMA mois', 'EMA total'])
+
+            fig, ax = plt.subplots()
+            ax.axis('off')
+            fig.tight_layout()
+
+            table = ax.table(
+                cellText=ema_table,
+                cellLoc='center',
+                loc='center'
+            )
+
+            table.scale(1.0, 1.2)
+            for i in range(len(ema_table[0])):
+                table[(0, i)].set_text_props(weight="bold")
+
+            # Save if needed
+            if save_mode == "directory":
+                out_path = os.path.join(save_file, f"ema_{date_name}.png")
+                plt.savefig(out_path, dpi=200, bbox_inches="tight")
+            elif save_mode == "prefix":
+                out_path = f"{save_file}_{date_name}.png"
+                plt.savefig(out_path, dpi=200, bbox_inches="tight")
+
+            if save_file == "":
+                plt.show()
