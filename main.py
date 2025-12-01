@@ -55,6 +55,7 @@ while continuer:
         if err_code != 0:
             print("Erreur :", err_mess)
     elif choix == 3:
+        processed_files = []
         for file in Path(IMPORT_FOLDER).iterdir():
             if file.is_file():
                 if file.suffix == ".xlsx":
@@ -62,11 +63,17 @@ while continuer:
                     err_code, err_mess = loader.load_games_excel(IMPORT_FOLDER + file.name)
                     if err_code != 0:
                         print("Erreur :", err_mess)
+                    else:
+                        processed_files.append(IMPORT_FOLDER + file.name)
                 if file.suffix == ".csv":
                     print("Chargement fichier", file.name)
                     err_code, err_mess = loader.load_game_csv(IMPORT_FOLDER + file.name)
                     if err_code != 0:
                         print("Erreur :", err_mess)
+                    else:
+                        processed_files.append(IMPORT_FOLDER + file.name)
+        for file_name in processed_files:
+            os.remove(file_name)
     elif choix == 4:
         file_path = input("Entrez le nom du fichier json (vide pour defaut) : ")
         if file_path == "":
