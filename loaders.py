@@ -11,7 +11,7 @@ class DataLoader:
     def load_game_csv(self, file_path: str) -> tuple[int, str]:
         # Pretraitement
         df = pd.read_csv(file_path)
-        df['Game start date'] = pd.to_datetime(df['Game start date'], format="%a %b %d %H:%M:%S GMT%z %Y", errors="coerce").dt.tz_convert(None)
+        df['Game start date'] = pd.to_datetime(df['Game start date'], format="%a %b %d %H:%M:%S GMT+02:00 %Y", errors="coerce")
         df.columns = df.columns.str.removeprefix("Points ")
 
         # Extraction donnees base
