@@ -91,8 +91,13 @@ class DataLoader:
                 print(f"Joueur '{name}' inconnu.")
                 print("(1) Ajouter en tant que nouveau joueur")
                 print("(2) Ajouter en tant qu'alias pour un joueur existant")
-                choix = int(input())
-                if not(choix in [1, 2]):
+                print("(3) Annuler l'ajout de la partie")
+                choix = input()
+                try:
+                    choix = int(choix)
+                    if not(choix in [1, 2, 3]):
+                        continue
+                except:
                     continue
                 if choix == 1:
                     print("Elo pour le joueur : ", end="")
@@ -100,12 +105,14 @@ class DataLoader:
                     print("Nom officiel du joueur : ", end="")
                     player_name = input()
                     err_code, err_mess = self.data.add_player(Player(player_name, elo))
-                    if err_code == 0:
+                    if err_code == 0 and name != player_name:
                         err_code, err_mess = self.data.add_alias(name, player_name)
-                if choix == 2:
+                elif choix == 2:
                     print("Joueur dont c'est l'alias : ", end="")
                     player_name = input()
                     err_code, err_mess = self.data.add_alias(name, player_name)
+                elif choix == 3:
+                    return (-1, "Annulation de l'ajout de la partie")
                 if err_code != 0:
                     print("Erreur :", err_mess)
         err_code, err_mess = self.data.add_game(Game(names, end_points, date, rounds))

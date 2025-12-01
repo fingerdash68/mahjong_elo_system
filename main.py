@@ -70,8 +70,17 @@ while continuer:
                     err_code, err_mess = loader.load_game_csv(IMPORT_FOLDER + file.name)
                     if err_code != 0:
                         print("Erreur :", err_mess)
-                    else:
+                    if err_code == 0 or err_code == 1:
                         processed_files.append(IMPORT_FOLDER + file.name)
+            if len(processed_files) % 10 == 0 and len(processed_files) > 0:
+                print("Sauvegarder l'avancement ? (y/n) ", end="")
+                choix = input().lower()
+                if choix == "y":
+                    with open(DATA_SAVE_FILE, "w") as f:
+                        json.dump(data.to_dict(), f, indent=4)
+                    for file_name in processed_files:
+                        os.remove(file_name)
+                    processed_files = []
         for file_name in processed_files:
             os.remove(file_name)
     elif choix == 4:

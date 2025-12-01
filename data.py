@@ -176,6 +176,7 @@ class Data:
         Format de 'elo' et 'nb_games' : tab[num game][player name]
         """
         self.games = sorted(self.games)
+        self.players = sorted(self.players)
         current_elo = {}
         current_nb_games = {}
         for p in self.players:
