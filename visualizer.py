@@ -6,7 +6,7 @@ class Visualizer:
     def __init__(self, data: Data):
         self.data = data
     
-    def plot_elos(self, players_per_plot: int = 3, save_file: str = ""):
+    def plot_elos(self, players_per_plot: int = 4, save_file: str = ""):
         # Extract shared time axis
         dates = [g.date for g in self.data.games]
 
@@ -38,7 +38,16 @@ class Visualizer:
 
             for player in group:
                 elo_values = [elo[player] for elo in self.data.elo]
-                plt.plot(dates, elo_values, label=player)
+
+                # Remove duplicates of dates
+                dates_no_dup = []
+                elo_values_no_dup = []
+                for i in range(len(dates)):
+                    if i == len(dates) - 1 or (dates[i+1] - dates[i]).days >= 1:
+                        dates_no_dup.append(dates[i])
+                        elo_values_no_dup.append(elo_values[i])
+                print(len(dates), len(dates_no_dup))
+                plt.plot(dates_no_dup, elo_values_no_dup, label=player)
 
             plt.xlabel("Date")
             plt.ylabel("Elo Rating")

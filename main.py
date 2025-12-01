@@ -76,7 +76,7 @@ while continuer:
     elif choix == 5:
         players_per_plot = input("Entrez le nombre de joueur par graphe : ")
         if players_per_plot == "":
-            players_per_plot = "3"
+            players_per_plot = "6"
         players_per_plot = int(players_per_plot)
         save_path = input("Entrez le chemin d'enregistrement : ")
         visualizer.plot_elos(players_per_plot, save_path)
