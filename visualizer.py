@@ -46,7 +46,7 @@ class Visualizer:
                     if i == len(dates) - 1 or (dates[i+1] - dates[i]).days >= 1:
                         dates_no_dup.append(dates[i])
                         elo_values_no_dup.append(elo_values[i])
-                print(len(dates), len(dates_no_dup))
+                        
                 plt.plot(dates_no_dup, elo_values_no_dup, label=player)
 
             plt.xlabel("Date")
@@ -58,10 +58,10 @@ class Visualizer:
 
             # Save if needed
             if save_mode == "directory":
-                out_path = os.path.join(save_file, f"elo_{fig_index}.png")
+                out_path = os.path.join(save_file, f"elo_{"_".join(group)}.png")
                 plt.savefig(out_path)
             elif save_mode == "prefix":
-                out_path = f"{save_file}_{fig_index}.png"
+                out_path = f"{save_file}_{"_".join(group)}.png"
                 plt.savefig(out_path)
             
             # Show only when not saving
@@ -120,7 +120,7 @@ class Visualizer:
 
             # Save if needed
             if save_mode == "directory":
-                out_path = os.path.join(save_file, f"ema_{date_name}.png")
+                out_path = os.path.join(save_file, f"ema_{months_name[month]}_{year}.png")
                 plt.savefig(out_path, dpi=200, bbox_inches="tight")
             elif save_mode == "prefix":
                 out_path = f"{save_file}_{date_name}.png"
