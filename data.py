@@ -143,6 +143,9 @@ class Data:
         if sum(game.end_points) != 0:
             return (3, "Somme non nulle")
         
+        if len(game.rounds) != 0 and len(game.rounds) < 9:
+            return (4, "Ouest non atteint")
+        
         self.games.append(game)
         self._update_ema()
         return (0, "")
