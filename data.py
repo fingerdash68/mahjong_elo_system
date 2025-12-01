@@ -29,7 +29,7 @@ class Round:
         }
 
     @classmethod
-    def from_dict(self, data: dict) -> Round:
+    def from_dict(cls, data: dict) -> Round:
         return Round(
             winner = data['winner'],
             discarder = data['discarder'],
@@ -45,6 +45,8 @@ class Game:
         self.players = deepcopy(players)
         self.end_points = deepcopy(end_points)
         self.date = date
+        if rounds is None:
+            rounds = []
         self.rounds = deepcopy(rounds)
 
     def __eq__(self, other: Game) -> bool:
@@ -73,7 +75,7 @@ class Game:
         }
     
     @classmethod
-    def from_dict(self, data: dict) -> Game:
+    def from_dict(cls, data: dict) -> Game:
         return Game(
             players = data['players'],
             end_points = data['end_points'],
@@ -113,7 +115,7 @@ class Player:
         }
     
     @classmethod
-    def from_dict(self, data: dict) -> Player:
+    def from_dict(cls, data: dict) -> Player:
         return Player(
             name = data['name'],
             base_elo = data['base_elo']
@@ -130,8 +132,9 @@ class Data:
         self._update_ema()
     
     def add_game(self, game: Game) -> tuple[int, str]:
-        if game in self.games:
-            return (1, "Partie en double")
+        for g in self.games:
+            if (self._calc_aliases(g.players), g.end_points, g.date) == (self._calc_aliases(game.players), game.end_points, game.date): # Parties egales aux alias pres
+                return (1, "Partie en double")
 
         for i in range(len(game.players)):
             if not(game.players[i] in self.aliases):
@@ -208,6 +211,7 @@ class Data:
 
     def _update_ema(self):
         """
+        Format de 'ema' : tab[month](num_month, {joueur: stats_ema})
         Stats for EMA : last elo, nb games played, ema gain, total ema, rank
         """
         self._update_elo()
@@ -226,6 +230,7 @@ class Data:
 
         for igame in range(len(self.games)):
             if igame == len(self.games)-1 or self._get_num_month(igame) != self._get_num_month(igame+1):
+                num_month = self._get_num_month(igame)
                 for p in self.players:
                     current_ema_stats[p.name]['elo'] = self.elo[igame][p.name]
                     current_ema_stats[p.name]['nb games'] = self.nb_games[igame][p.name] - last_nb_games[p.name]
@@ -249,12 +254,18 @@ class Data:
                     current_ema_stats[p.name]['ema gain'] = (min(nb_games, EMA_MIN_GAMES_PER_MONTH) / EMA_MIN_GAMES_PER_MONTH) * (EMA_MIN_GAIN + (EMA_MAX_GAIN - EMA_MIN_GAIN) * (pos / (len(list_elos) - 1)))
                     current_ema_stats[p.name]['total ema'] = current_ema_stats[p.name]['total ema'] + current_ema_stats[p.name]['ema gain']
                 
-                self.ema.append(deepcopy(current_ema_stats))
+                self.ema.append((num_month, deepcopy(current_ema_stats)))
 
     def _get_num_month(self, igame: int) -> int:
         """ Returns the number of the month with year included """
         game = self.games[igame]
         return game.date.year * 12 + game.date.month
+    
+    def _calc_aliases(self, names: list[str]) -> list[str]:
+        new_names = []
+        for name in names:
+            new_names.append(self.aliases[name])
+        return new_names
 
     def to_dict(self) -> dict:
         return {
@@ -264,7 +275,7 @@ class Data:
         }
     
     @classmethod
-    def from_dict(self, data: dict) -> Data:
+    def from_dict(cls, data: dict) -> Data:
         return Data(
             games = [Game.from_dict(g) for g in data['games']],
             players = [Player.from_dict(p) for p in data['players']],

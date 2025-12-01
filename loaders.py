@@ -34,6 +34,37 @@ class DataLoader:
         
         # Ajout partie
         return self._try_to_add_game(data, names, end_points, date, rounds)
+    
+    def load_games_excel(self, data: Data, file_path: str) -> tuple[int, str]:
+        xlsx = pd.ExcelFile(file_path)
+        df_games = pd.read_excel(xlsx, sheet_name="Donnees", header=None)
+        df_players = pd.read_excel(xlsx, sheet_name="EMA points", header=None)
+
+        # Chargement des joueurs
+        for row_num in range(2, len(df_players)):
+            name = str(df_players.iloc[row_num, 0])
+            base_elo = float(df_players.iloc[row_num, 1]) # type: ignore
+            data.add_player(Player(name, base_elo))
+
+        # Chargement des parties
+        for row_num in range(0, len(df_games), 4):
+            date_cell = df_games.iloc[row_num+1, 5]
+            if pd.isna(date_cell):
+                continue
+            date = dt.datetime.fromisoformat(str(date_cell))
+            player_names = []
+            player_scores = []
+            for wind in range(4):
+                name = str(df_games.iloc[row_num+1, 1 + wind])
+                score = int(df_games.iloc[row_num+2, 1 + wind]) # type: ignore
+                player_names.append(name)
+                player_scores.append(score)
+            err_code, err_mess = data.add_game(Game(player_names, player_scores, date))
+            if err_code != 0:
+                return (err_code, err_mess)
+
+
+        return (0, "")
 
 
     def load_game_std_input(self, data: Data) -> tuple[int, str]:
