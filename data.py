@@ -212,7 +212,7 @@ class Data:
     def _update_ema(self):
         """
         Format de 'ema' : tab[month](num_month, {joueur: stats_ema})
-        Stats for EMA : last elo, nb games played, ema gain, total ema, rank
+        Stats for EMA : elo, nb games, ema gain, total ema, rank
         """
         self._update_elo()
         last_nb_games = {}
