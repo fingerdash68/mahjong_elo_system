@@ -49,6 +49,15 @@ class Game:
             rounds = []
         self.rounds = deepcopy(rounds)
 
+    def update_rounds(self, rounds: list[Round]) -> tuple[int, str]:
+        """
+        Only add the rounds if they are not already present
+        """
+        if len(self.rounds) == 0:
+            self.rounds = deepcopy(rounds)
+            return (0, "")
+        return (1, "Rounds deja presents")
+
     def __eq__(self, other: Game) -> bool:
         if not(isinstance(other, Game)):
             return NotImplemented
@@ -132,9 +141,14 @@ class Data:
         self._update_ema()
     
     def add_game(self, game: Game) -> tuple[int, str]:
-        for g in self.games:
+        for igame in range(len(self.games)):
+            g = self.games[igame]
             if (self._calc_aliases(g.players), g.end_points, g.date) == (self._calc_aliases(game.players), game.end_points, game.date): # Parties egales aux alias pres
-                return (1, "Partie en double")
+                err_code, err_mess = self.games[igame].update_rounds(game.rounds)
+                if err_code == 0:
+                    return (1, "Partie en double (Rounds ajoutes)")
+                else:
+                    return (1, "Partie en double")
 
         for i in range(len(game.players)):
             if not(game.players[i] in self.aliases):
