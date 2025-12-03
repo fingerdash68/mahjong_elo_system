@@ -128,3 +128,32 @@ class Visualizer:
 
             if save_file == "":
                 plt.show()
+
+    def calc_winning_wind_full_game(self) -> dict[str, list[list[tuple]]]:
+        """
+        Calculates the frequency of winning a game for each player and each wind
+        return frequency tab : {player name: [wind num][place](count, freq by wind)}
+        one special player name for the total : 'total'
+        one special 5th wind for the total
+        """
+        freqs = {}
+        default_freqs = [[0 for place in range(4)] for wind in range(5)]
+        players_with_total = self.data.players + ['total']
+        for p in players_with_total:
+            freqs[p] = deepcopy(default_freqs)
+        for game in self.data.games:
+            rank_points = pd.Series(game.end_points).rank()
+            for wind in range(4):
+                player_name = self.data.aliases[game.players[wind]]
+                freqs[player_name][wind][4 - int(rank_points[wind])] += 1
+                freqs[player_name][4][4 - int(rank_points[wind])] += 1
+                freqs['total'][wind][4 - int(rank_points[wind])] += 1
+                freqs['total'][4][4 - int(rank_points[wind])] += 1
+        for p in players_with_total:
+            for wind in range(5):
+                S = 0.00000001
+                for place in range(4):
+                    S += freqs[p][wind][place]
+                for place in range(4):
+                    freqs[p][wind][place] = (freqs[p][wind][place], freqs[p][wind][place] / S)
+        return freqs

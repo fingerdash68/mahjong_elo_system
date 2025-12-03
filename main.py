@@ -41,6 +41,7 @@ while continuer:
         (4) Sauvegarder dans un fichier json
         (5) Afficher les elos
         (6) Afficher les emas
+        (7) Stats speciales
         (0) Quitter
     """)
     choix = int(input())
@@ -99,6 +100,29 @@ while continuer:
     elif choix == 6:
         save_path = input("Entrez le chemin d'enregistrement : ")
         visualizer.plot_emas(save_path)
+    elif choix == 7:
+        print("""
+            (1) Stats par vent
+        """)
+        choix2 = int(input())
+        if choix2 == 1:
+            freqs = visualizer.calc_winning_wind_full_game()
+            def print_freqs(freq):
+                winds = ['East', 'South', 'West', 'North', 'Total']
+                places = ['1st', '2nd', '3rd', '4th']
+                for wind in range(len(winds)):
+                    print(f"\t{winds[wind]} : ", end="")
+                    for place in range(len(places)):
+                        if place != 0: print(", ", end="")
+                        print(f"{places[place]} : {freq[wind][place][0]} ({round(100*freq[wind][place][1], 1)}%)", end="")
+                    print()
+            for p in data.players:
+                print(p.name, ":")
+                print_freqs(freqs[p.name])
+            print("TOTAL :")
+            print_freqs(freqs['total'])
+
+
     elif choix == 0:
         continuer = False
 
