@@ -127,7 +127,7 @@ class DataLoader:
 
     
     def _read_game_input(self) -> tuple[list[str], list[int], dt.datetime]:
-        winds = ['Est', 'Sud', 'West', 'Nord']
+        winds = ['Est', 'Sud', 'Ouest', 'Nord']
         names = []
         end_points = []
         for wind in winds:
