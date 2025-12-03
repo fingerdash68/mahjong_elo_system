@@ -160,7 +160,7 @@ class Data:
         if len(game.rounds) != 0 and len(game.rounds) < 9:
             return (4, "Ouest non atteint")
         
-        #self.games.append(game)
+        self.games.append(game)
         self._update_ema()
         return (0, "")
 
