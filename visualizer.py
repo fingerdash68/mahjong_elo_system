@@ -48,6 +48,7 @@ class Visualizer:
                         elo_values_no_dup.append(elo_values[i])
                         
                 plt.plot(dates_no_dup, elo_values_no_dup, label=player)
+                # plt.plot(dates, elo_values, label=player)
 
             plt.xlabel("Date")
             plt.ylabel("Elo Rating")
