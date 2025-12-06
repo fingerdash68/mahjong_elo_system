@@ -99,8 +99,8 @@ class Visualizer:
                         round(stats['ema gain']),
                         round(stats['total ema'])])
             ema_table.sort(
-                key = lambda x : x[0], # Name sorting
-                reverse = False
+                key = lambda x : x[5], # Total EMA sorting
+                reverse = True
             )
             ema_table.insert(0, [date_name, 'Elo', 'Rang', 'Nb parties', 'EMA mois', 'EMA total'])
 
