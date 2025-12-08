@@ -184,6 +184,42 @@ class Data:
 
         self.aliases[alias] = player_name
         return (0, "")
+    
+    def remove_player(self, player_name: str) -> tuple[int, str]:
+        if not(player_name) in self.players:
+            return (1, "Joueur inexistant")
+        
+        games_to_remove = []
+        for igame in range(len(self.games)):
+            if player_name in self.games[igame].players:
+                games_to_remove.append(igame)
+        aliases_to_remove = []
+        for alias in self.aliases.keys():
+            if self.aliases[alias] == player_name:
+                aliases_to_remove.append(alias)
+        self.remove_games(games_to_remove)
+        self.remove_aliases(aliases_to_remove)
+        player_id = 0
+        while self.players[player_id].name != player_name:
+            player_id += 1
+        self.players.pop(player_id)
+        return (0, "")
+
+    def remove_games(self, game_ids: list[int]):
+        game_ids.append(len(self.games) + 10)
+        new_games = []
+        remove_id = 0
+        for id in range(len(self.games)):
+            if id == game_ids[remove_id]:
+                remove_id += 1
+            else:
+                new_games.append(self.games[id])
+        game_ids.pop()
+        self.games = new_games
+
+    def remove_aliases(self, aliases: list[str]):
+        for alias in aliases:
+            self.aliases.pop(alias, None)
 
     def _update_elo(self):
         """

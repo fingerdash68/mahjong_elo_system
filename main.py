@@ -42,6 +42,7 @@ while continuer:
         (5) Afficher les elos
         (6) Afficher les emas
         (7) Stats speciales
+        (8) Supprimer un joueur
         (0) Quitter
     """)
     choix = int(input())
@@ -121,8 +122,11 @@ while continuer:
                 print_freqs(freqs[p.name])
             print("TOTAL :")
             print_freqs(freqs['total'])
-
-
+    elif choix == 8:
+        player_name = input("Entrez le nom du joueur a supprimer :")
+        err_code, err_mess = loader.remove_player(player_name)
+        if err_code != 0:
+            print("Erreur :", err_mess)
     elif choix == 0:
         continuer = False
 
