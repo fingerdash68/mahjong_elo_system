@@ -9303,199 +9303,6 @@
         },
         {
             "players": [
-                "Mathieu",
-                "Laetitia",
-                "Claire",
-                "Gerard"
-            ],
-            "end_points": [
-                23,
-                -60,
-                185,
-                -148
-            ],
-            "date": "2025-10-09T20:06:42",
-            "rounds": [
-                {
-                    "winner": "Claire",
-                    "discarder": null,
-                    "hand_points": "11",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "G\u00e9g\u00e9",
-                    "hand_points": "12",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "G\u00e9g\u00e9",
-                    "hand_points": "14",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": null,
-                    "discarder": null,
-                    "hand_points": "0",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Mathieu",
-                    "discarder": "Laetitia",
-                    "hand_points": "12",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": null,
-                    "hand_points": "12",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "G\u00e9g\u00e9",
-                    "discarder": null,
-                    "hand_points": "14",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Laetitia",
-                    "discarder": "Claire",
-                    "hand_points": "14",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "G\u00e9g\u00e9",
-                    "hand_points": "12",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "Laetitia",
-                    "hand_points": "11",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Laetitia",
-                    "discarder": "G\u00e9g\u00e9",
-                    "hand_points": "21",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Mathieu",
-                    "discarder": null,
-                    "hand_points": "18",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Mathieu",
-                    "discarder": "G\u00e9g\u00e9",
-                    "hand_points": "10",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "Laetitia",
-                    "hand_points": "9",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": "Laetitia",
-                    "discarder": "Claire",
-                    "hand_points": "8",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                },
-                {
-                    "winner": null,
-                    "discarder": null,
-                    "hand_points": "0",
-                    "penalties": {
-                        "Mathieu": "0",
-                        "Laetitia": "0",
-                        "Claire": "0",
-                        "G\u00e9g\u00e9": "0"
-                    }
-                }
-            ]
-        },
-        {
-            "players": [
                 "Kevin",
                 "Valerie D",
                 "Frederic",
@@ -9686,22 +9493,6 @@
                     }
                 }
             ]
-        },
-        {
-            "players": [
-                "Mathieu",
-                "Gerard",
-                "Laetitia",
-                "Sylvie"
-            ],
-            "end_points": [
-                150,
-                74,
-                -25,
-                -199
-            ],
-            "date": "2025-10-09T22:32:43",
-            "rounds": []
         },
         {
             "players": [
@@ -11226,199 +11017,6 @@
                         "Valerie D": "0",
                         "Halim": "0",
                         "Raphael": "0"
-                    }
-                }
-            ]
-        },
-        {
-            "players": [
-                "Sven",
-                "Christine",
-                "Claire",
-                "Jade"
-            ],
-            "end_points": [
-                -23,
-                -186,
-                84,
-                125
-            ],
-            "date": "2025-10-16T18:57:06",
-            "rounds": [
-                {
-                    "winner": "Jade",
-                    "discarder": "Claire",
-                    "hand_points": "15",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Christine",
-                    "discarder": "Jade",
-                    "hand_points": "11",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Jade",
-                    "discarder": "Sven",
-                    "hand_points": "21",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": null,
-                    "hand_points": "13",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Jade",
-                    "discarder": null,
-                    "hand_points": "12",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Jade",
-                    "discarder": "Christine",
-                    "hand_points": "9",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Jade",
-                    "discarder": "Sven",
-                    "hand_points": "16",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "Jade",
-                    "hand_points": "11",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "Christine",
-                    "hand_points": "24",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "Sven",
-                    "hand_points": "13",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Sven",
-                    "discarder": null,
-                    "hand_points": "10",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Jade",
-                    "discarder": "Christine",
-                    "hand_points": "13",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": null,
-                    "discarder": null,
-                    "hand_points": "0",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Claire",
-                    "discarder": "Christine",
-                    "hand_points": "16",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Sven",
-                    "discarder": "Claire",
-                    "hand_points": "10",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
-                    }
-                },
-                {
-                    "winner": "Sven",
-                    "discarder": null,
-                    "hand_points": "12",
-                    "penalties": {
-                        "Sven": "0",
-                        "Christine": "0",
-                        "Claire": "0",
-                        "Jade": "0"
                     }
                 }
             ]
@@ -28212,16 +27810,8 @@
             "base_elo": 1000.0
         },
         {
-            "name": "Christine",
-            "base_elo": 957.2
-        },
-        {
             "name": "Christophe",
             "base_elo": 1068.3400000000001
-        },
-        {
-            "name": "Claire",
-            "base_elo": 1031.12
         },
         {
             "name": "Delphine",
@@ -28244,10 +27834,6 @@
             "base_elo": 1092.7849999999999
         },
         {
-            "name": "Gerard",
-            "base_elo": 1001.0350000000001
-        },
-        {
             "name": "Ghislaine",
             "base_elo": 923.36
         },
@@ -28264,10 +27850,6 @@
             "base_elo": 980.345
         },
         {
-            "name": "Jade",
-            "base_elo": 1000.0
-        },
-        {
             "name": "Jean-Michel",
             "base_elo": 997.8
         },
@@ -28282,10 +27864,6 @@
         {
             "name": "Kevin",
             "base_elo": 1032.51
-        },
-        {
-            "name": "Laetitia",
-            "base_elo": 1011.415
         },
         {
             "name": "Laurence",
@@ -28332,14 +27910,6 @@
             "base_elo": 1000.0
         },
         {
-            "name": "Sven",
-            "base_elo": 1055.9299999999998
-        },
-        {
-            "name": "Sylvie",
-            "base_elo": 994.44
-        },
-        {
             "name": "Valerie D",
             "base_elo": 949.405
         },
@@ -28384,14 +27954,7 @@
         "Victoria": "Victoria",
         "Kevin": "Kevin",
         "Juliette": "Juliette",
-        "Laetitia": "Laetitia",
-        "Claire": "Claire",
-        "Gerard": "Gerard",
-        "Sylvie": "Sylvie",
         "Halim": "Halim",
-        "Christine": "Christine",
-        "Jade": "Jade",
-        "Sven": "Sven",
         "Valerie L": "Valerie L",
         "K\u00e9vin": "Kevin",
         "Fred": "Frederic",
@@ -28454,7 +28017,6 @@
         "Xavier99": "Xavier",
         "Jm57": "Jean-Michel",
         "Delphine99": "Delphine",
-        "G\u00e9g\u00e9": "Gerard",
         "Nathalie44": "Nathalie",
         "Victoria??": "Victoria",
         "Fabienne26": "Fabienne",
