@@ -130,6 +130,23 @@ class Visualizer:
             if save_file == "":
                 plt.show()
 
+    def print_players(self, max_aliases: int = 4):
+        alias_list = {}
+        for player in self.data.players:
+            alias_list[player.name] = []
+        for alias, name in self.data.aliases.items():
+            alias_list[name].append(alias)
+        print("Liste de joueurs :")
+        for player in self.data.players:
+            print(f"- {player.name} (", end="")
+            for ialias in range(min(max_aliases, len(alias_list[player.name]))):
+                if ialias != 0:
+                    print(", ", end="")
+                print(alias_list[player.name][ialias], end="")
+            if len(alias_list[player.name]) > max_aliases:
+                print(", ...", end="")
+            print(")")
+
     def calc_winning_wind_full_game(self) -> dict[str, list[list[tuple]]]:
         """
         Calculates the frequency of winning a game for each player and each wind
