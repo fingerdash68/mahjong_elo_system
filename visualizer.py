@@ -42,8 +42,13 @@ class Visualizer:
                 # Remove duplicates of dates
                 dates_no_dup = []
                 elo_values_no_dup = []
+                still_starting_elo = True
                 for i in range(len(dates)):
-                    if i == len(dates) - 1 or (dates[i+1] - dates[i]).days >= 1:
+                    if still_starting_elo and (i == len(dates) - 1 or elo_values[i+1] != elo_values[i]):
+                        still_starting_elo = False
+                        dates_no_dup.append(dates[i])
+                        elo_values_no_dup.append(elo_values[i])
+                    if not(still_starting_elo) and (i == len(dates) - 1 or (dates[i+1] - dates[i]).days >= 1):
                         dates_no_dup.append(dates[i])
                         elo_values_no_dup.append(elo_values[i])
                         
