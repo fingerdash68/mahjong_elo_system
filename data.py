@@ -310,6 +310,37 @@ class Data:
                 
                 self.ema.append((num_month, deepcopy(current_ema_stats)))
 
+    def _get_readable_elo_dict(self) -> dict:
+        current_elo = {}
+        for p in self.players:
+            current_elo[p.name] = p.base_elo
+        elo_dict = {}
+        for igame in range(len(self.games)):
+            game = self.games[igame]
+            datestr = game.date.isoformat()
+            elo_dict[datestr] = {"elo": self.elo[igame]}
+            elo_dict[datestr]['elo_before'] = {}
+            elo_dict[datestr]['elo_diff'] = {}
+            elo_dict[datestr]['points'] = {}
+            elo_dict[datestr]['awaited_perf'] = {}
+            elo_dict[datestr]['elo_gain'] = {}
+            for iplayer in range(len(game.players)):
+                name = self.aliases[game.players[iplayer]]
+                elo_dict[datestr]['elo_gain'][name] = self.elo[igame][name] - current_elo[name]
+                elo_dict[datestr]['points'][name] = sorted(game.end_points).index(game.end_points[iplayer])
+                elo_dict[datestr]['elo_before'][name] = current_elo[name]
+                elo_dict[datestr]['awaited_perf'][name] = 0.0
+                mean_elo = 0
+                for alias2 in game.players:
+                    name2 = self.aliases[alias2]
+                    if name != name2:
+                        elo_dict[datestr]['awaited_perf'][name] += 1.0 / (1.0 + 10 ** ((current_elo[name2] - current_elo[name]) / ELO_DIFF_SCALING))
+                    mean_elo += current_elo[name2]
+                mean_elo /= len(game.players)
+                elo_dict[datestr]['elo_diff'][name] = current_elo[name] - mean_elo
+            current_elo = self.elo[igame]
+        return elo_dict
+
     def _get_num_month(self, igame: int) -> int:
         """ Returns the number of the month with year included """
         game = self.games[igame]

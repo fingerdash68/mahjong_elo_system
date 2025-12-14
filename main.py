@@ -105,6 +105,8 @@ while continuer:
     elif choix == 7:
         print("""
             (1) Stats par vent
+            (2) Enregistrer elos
+            (3) Enregistrer ema
         """)
         choix2 = int(input())
         if choix2 == 1:
@@ -123,6 +125,14 @@ while continuer:
                 print_freqs(freqs[p.name])
             print("TOTAL :")
             print_freqs(freqs['total'])
+        elif choix2 == 2:
+            file_path = input("Entrez le nom du fichier ou enregistrer les elos : ")
+            with open(file_path, "w") as f:
+                json.dump(data._get_readable_elo_dict(), f, indent=4)
+        elif choix2 == 3:
+            file_path = input("Entrez le nom du fichier ou enregistrer les emas : ")
+            with open(file_path, "w") as f:
+                json.dump(data.ema, f, indent=4)
     elif choix == 8:
         player_name = input("Entrez le nom du joueur a supprimer : ")
         err_code, err_mess = loader.remove_player(player_name)
