@@ -180,3 +180,26 @@ class Visualizer:
                 for place in range(4):
                     freqs[p][wind][place] = (freqs[p][wind][place], freqs[p][wind][place] / S)
         return freqs
+    
+    def calc_nb_encounters(self) -> dict[str, dict[str, int]]:
+        """
+        Calculates the number of time each player has played against each other in the tournament
+        return count tab : {player 1: {player 2: count}}
+        """
+        counts = {}
+        players_with_total = [p.name for p in self.data.players] + ['total']
+        for p1 in players_with_total:
+            counts[p1] = {}
+            for p2 in players_with_total:
+                counts[p1][p2] = 0
+        for game in self.data.games:
+            counts['total']['total'] += 1
+            for a1 in game.players:
+                p1 = self.data.aliases[a1]
+                counts[p1]['total'] += 1
+                counts['total'][p1] += 1
+                for a2 in game.players:
+                    p2 = self.data.aliases[a2]
+                    if p1 != p2:
+                        counts[p1][p2] += 1
+        return counts

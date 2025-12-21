@@ -107,6 +107,7 @@ while continuer:
             (1) Stats par vent
             (2) Enregistrer elos
             (3) Enregistrer ema
+            (4) Nombre de rencontres par joueur
         """)
         choix2 = int(input())
         if choix2 == 1:
@@ -133,6 +134,20 @@ while continuer:
             file_path = input("Entrez le nom du fichier ou enregistrer les emas : ")
             with open(file_path, "w") as f:
                 json.dump(data.ema, f, indent=4)
+        elif choix2 == 4:
+            counts = visualizer.calc_nb_encounters()
+            def print_counts(count):
+                nb_prints = 0
+                for p, val in dict(sorted(count.items(), key=lambda x: x[1], reverse=True)).items():
+                    if val > 0:
+                        print(f"\t{p} : {val}", end="\t")
+                        nb_prints += 1
+                        if nb_prints%4 == 0:
+                            print()
+                if nb_prints%4 != 0: print()
+            for p, count in counts.items():
+                print(f"Rencontres de {p} :")
+                print_counts(count)
     elif choix == 8:
         player_name = input("Entrez le nom du joueur a supprimer : ")
         err_code, err_mess = loader.remove_player(player_name)
