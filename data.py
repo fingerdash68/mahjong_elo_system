@@ -335,8 +335,8 @@ class Data:
                     name2 = self.aliases[alias2]
                     if name != name2:
                         elo_dict[datestr]['awaited_perf'][name] += 1.0 / (1.0 + 10 ** ((current_elo[name2] - current_elo[name]) / ELO_DIFF_SCALING))
-                    mean_elo += current_elo[name2]
-                mean_elo /= len(game.players)
+                        mean_elo += current_elo[name2]
+                mean_elo /= len(game.players) - 1
                 elo_dict[datestr]['elo_diff'][name] = current_elo[name] - mean_elo
             current_elo = self.elo[igame]
         return elo_dict
