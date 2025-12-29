@@ -108,6 +108,7 @@ while continuer:
             (2) Enregistrer elos
             (3) Enregistrer ema
             (4) Nombre de rencontres par joueur
+            (5) Stats nemesis
         """)
         choix2 = int(input())
         if choix2 == 1:
@@ -148,6 +149,22 @@ while continuer:
             for p, count in counts.items():
                 print(f"Rencontres de {p} :")
                 print_counts(count)
+        elif choix2 == 5:
+            stats = visualizer.calc_nemesis()
+            def print_nemesis(stat):
+                nb_prints = 0
+                for p, val in dict(sorted(stat.items(), key=lambda x: (x[1]['win_rate'], -x[1]['nb_total']), reverse=False)).items():
+                    if val['nb_total'] > 0:
+                        print(f"\t{p} : {val['nb_wins']:.0f}/{val['nb_total']:.0f} ({100 * val['win_rate']:.1f}%)", end="\t")
+                        nb_prints += 1
+                        if nb_prints%3 == 0:
+                            print()
+                if nb_prints%4 != 0: print()
+            for p, stat in stats.items():
+                print(f"Taux de victoire de {p} :")
+                print()
+                print_nemesis(stat)
+                print()
     elif choix == 8:
         player_name = input("Entrez le nom du joueur a supprimer : ")
         err_code, err_mess = loader.remove_player(player_name)

@@ -203,3 +203,29 @@ class Visualizer:
                     if p1 != p2:
                         counts[p1][p2] += 1
         return counts
+    
+    def calc_nemesis(self) -> dict[str, dict[str, dict[str, float]]]:
+        stats = {}
+        players = [p.name for p in self.data.players]
+        for p1 in players:
+            stats[p1] = {}
+            for p2 in players:
+                if p1 != p2:
+                    stats[p1][p2] = {'nb_wins': 0.0, 'nb_total': 0.0, 'win_rate': 0.0}
+        for game in self.data.games:
+            for i in range(len(game.players)):
+                a1 = self.data.aliases[game.players[i]]
+                for j in range(i+1, len(game.players)):
+                    a2 = self.data.aliases[game.players[j]]
+                    stats[a1][a2]['nb_total'] += 1
+                    stats[a2][a1]['nb_total'] += 1
+                    if game.end_points[i] < game.end_points[j]:
+                        a1, a2 = a2, a1
+                    if game.end_points[i] == game.end_points[j]:
+                        stats[a1][a2]['nb_wins'] += 0.5
+                        stats[a2][a1]['nb_wins'] += 0.5
+                    else:
+                        stats[a1][a2]['nb_wins'] += 1
+                    stats[a1][a2]['win_rate'] = stats[a1][a2]['nb_wins'] / stats[a1][a2]['nb_total']
+                    stats[a2][a1]['win_rate'] = stats[a2][a1]['nb_wins'] / stats[a2][a1]['nb_total']
+        return stats
