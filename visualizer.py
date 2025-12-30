@@ -207,11 +207,12 @@ class Visualizer:
     def calc_nemesis(self) -> dict[str, dict[str, dict[str, float]]]:
         stats = {}
         players = [p.name for p in self.data.players]
+        alpha = 2
         for p1 in players:
             stats[p1] = {}
             for p2 in players:
                 if p1 != p2:
-                    stats[p1][p2] = {'nb_wins': 0.0, 'nb_total': 0.0, 'win_rate': 0.0}
+                    stats[p1][p2] = {'nb_wins': 0.0, 'nb_total': 0.0, 'win_rate': 0.0, 'smoothed_rate': 0.0}
         for game in self.data.games:
             for i in range(len(game.players)):
                 a1 = self.data.aliases[game.players[i]]
@@ -228,4 +229,6 @@ class Visualizer:
                         stats[a1][a2]['nb_wins'] += 1
                     stats[a1][a2]['win_rate'] = stats[a1][a2]['nb_wins'] / stats[a1][a2]['nb_total']
                     stats[a2][a1]['win_rate'] = stats[a2][a1]['nb_wins'] / stats[a2][a1]['nb_total']
+                    stats[a1][a2]['smoothed_rate'] = (stats[a1][a2]['nb_wins'] + alpha) / (stats[a1][a2]['nb_total'] + 2 * alpha)
+                    stats[a2][a1]['smoothed_rate'] = (stats[a2][a1]['nb_wins'] + alpha) / (stats[a2][a1]['nb_total'] + 2 * alpha)
         return stats

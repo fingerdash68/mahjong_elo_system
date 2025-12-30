@@ -153,7 +153,7 @@ while continuer:
             stats = visualizer.calc_nemesis()
             def print_nemesis(stat):
                 nb_prints = 0
-                for p, val in dict(sorted(stat.items(), key=lambda x: (x[1]['win_rate'], -x[1]['nb_total']), reverse=False)).items():
+                for p, val in dict(sorted(stat.items(), key=lambda x: (x[1]['smoothed_rate'], x[1]['win_rate'], -x[1]['nb_total']), reverse=False)).items():
                     if val['nb_total'] > 0:
                         print(f"\t{p} : {val['nb_wins']:.0f}/{val['nb_total']:.0f} ({100 * val['win_rate']:.1f}%)", end="\t")
                         nb_prints += 1
