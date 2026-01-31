@@ -44,6 +44,7 @@ while continuer:
         (7) Stats speciales
         (8) Supprimer un joueur
         (9) Afficher la liste des joueurs
+        (10) Terminal de commandes (dev only)
         (0) Quitter
     """)
     choix = int(input())
@@ -172,6 +173,14 @@ while continuer:
             print("Erreur :", err_mess)
     elif choix == 9:
         visualizer.print_players()
+    elif choix == 10:
+        commands = []
+        while True:
+            comm = input("> ")
+            if comm == "quit":
+                break
+            commands.append(comm)
+            exec(comm)
     elif choix == 0:
         continuer = False
 
