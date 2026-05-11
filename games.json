@@ -73551,6 +73551,4220 @@
                     }
                 }
             ]
+        },
+        {
+            "players": [
+                "Jean Michel",
+                "Juliette",
+                "Marc",
+                "Halim"
+            ],
+            "end_points": [
+                -112,
+                -55,
+                121,
+                46
+            ],
+            "date": "2026-04-29T14:01:45",
+            "rounds": [
+                {
+                    "winner": "Halim",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Jean Michel",
+                    "hand_points": "18",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Jean Michel",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": null,
+                    "hand_points": "9",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Jean Michel",
+                    "discarder": "Marc",
+                    "hand_points": "17",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Juliette",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Jean Michel",
+                    "discarder": "Halim",
+                    "hand_points": "22",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Juliette",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Jean Michel",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Juliette",
+                    "hand_points": "18",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": null,
+                    "hand_points": "18",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Juliette",
+                    "hand_points": "21",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Halim",
+                    "hand_points": "24",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Juliette",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Jean Michel": "0",
+                        "Juliette": "0",
+                        "Marc": "0",
+                        "Halim": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Rapha\u00ebl",
+                "Val\u00e9rie L",
+                "Delphine",
+                "Laurence"
+            ],
+            "end_points": [
+                117,
+                -68,
+                -214,
+                165
+            ],
+            "date": "2026-04-29T14:03:02",
+            "rounds": [
+                {
+                    "winner": "Laurence",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L",
+                    "discarder": "Rapha\u00ebl",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence",
+                    "discarder": "Delphine",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "21",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L",
+                    "discarder": "Delphine",
+                    "hand_points": "19",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": "Delphine",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": null,
+                    "hand_points": "16",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L",
+                    "discarder": "Delphine",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence",
+                    "discarder": "Rapha\u00ebl",
+                    "hand_points": "18",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Rapha\u00ebl": "0",
+                        "Val\u00e9rie L": "0",
+                        "Delphine": "0",
+                        "Laurence": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Juliette",
+                "Rapha\u00ebl",
+                "Jean Michel",
+                "Laurence"
+            ],
+            "end_points": [
+                -2,
+                35,
+                107,
+                -140
+            ],
+            "date": "2026-04-29T16:17:25",
+            "rounds": [
+                {
+                    "winner": "Juliette",
+                    "discarder": "Laurence",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Laurence",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": "Juliette",
+                    "hand_points": "30",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Jean Michel",
+                    "discarder": "Rapha\u00ebl",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Jean Michel",
+                    "discarder": "Laurence",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Jean Michel",
+                    "discarder": "Juliette",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": "Laurence",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence",
+                    "discarder": "Juliette",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Jean Michel",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Jean Michel",
+                    "discarder": "Juliette",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": "Jean Michel",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Jean Michel": "0",
+                        "Laurence": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Marc",
+                "Delphine",
+                "Halim",
+                "Val\u00e9rie L"
+            ],
+            "end_points": [
+                157,
+                -216,
+                16,
+                43
+            ],
+            "date": "2026-04-29T16:17:31",
+            "rounds": [
+                {
+                    "winner": "Marc",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Delphine",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Delphine",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L",
+                    "discarder": "Halim",
+                    "hand_points": "26",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": null,
+                    "hand_points": "24",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L",
+                    "discarder": "Delphine",
+                    "hand_points": "26",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L",
+                    "discarder": null,
+                    "hand_points": "29",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "28",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Marc": "0",
+                        "Delphine": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie L": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "LaurenceN",
+                "Fred",
+                "S\u00e9bastien",
+                "Math\u00e9o"
+            ],
+            "end_points": [
+                39,
+                -83,
+                -177,
+                221
+            ],
+            "date": "2026-05-02T14:06:33",
+            "rounds": [
+                {
+                    "winner": "LaurenceN",
+                    "discarder": "Math\u00e9o",
+                    "hand_points": "12",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": "LaurenceN",
+                    "hand_points": "11",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "LaurenceN",
+                    "discarder": null,
+                    "hand_points": "29",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": "Fred",
+                    "hand_points": "11",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "LaurenceN",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "15",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "S\u00e9bastien",
+                    "discarder": "Math\u00e9o",
+                    "hand_points": "22",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "11",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": null,
+                    "hand_points": "17",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "LaurenceN",
+                    "hand_points": "27",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "32",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": "Fred",
+                    "hand_points": "12",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "11",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "LaurenceN": "0",
+                        "Fred": "0",
+                        "S\u00e9bastien": "0",
+                        "Math\u00e9o": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "jean michel",
+                "valerie D",
+                "xavier",
+                "anna"
+            ],
+            "end_points": [
+                -82,
+                145,
+                -76,
+                13
+            ],
+            "date": "2026-05-02T14:06:58",
+            "rounds": [
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "valerie D",
+                    "discarder": "jean michel",
+                    "hand_points": "12",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "anna",
+                    "discarder": null,
+                    "hand_points": "26",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "valerie D",
+                    "discarder": null,
+                    "hand_points": "18",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "valerie D",
+                    "discarder": "anna",
+                    "hand_points": "24",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "anna",
+                    "discarder": "valerie D",
+                    "hand_points": "11",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "anna",
+                    "discarder": "xavier",
+                    "hand_points": "15",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "valerie D",
+                    "discarder": "anna",
+                    "hand_points": "9",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "valerie D",
+                    "discarder": "xavier",
+                    "hand_points": "19",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "anna",
+                    "hand_points": "10",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "xavier",
+                    "discarder": "jean michel",
+                    "hand_points": "17",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "xavier",
+                    "hand_points": "13",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": "xavier",
+                    "discarder": "anna",
+                    "hand_points": "30",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "jean michel": "0",
+                        "valerie D": "0",
+                        "xavier": "0",
+                        "anna": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Ghislaine",
+                "Franck",
+                "Halim",
+                "Richard"
+            ],
+            "end_points": [
+                -17,
+                -130,
+                48,
+                99
+            ],
+            "date": "2026-05-02T14:08:25",
+            "rounds": [
+                {
+                    "winner": "Halim",
+                    "discarder": "Franck",
+                    "hand_points": "22",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Richard",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": null,
+                    "hand_points": "22",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Franck",
+                    "hand_points": "27",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Ghislaine",
+                    "discarder": "Franck",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Franck",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Franck",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Richard",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Richard",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Franck",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Ghislaine",
+                    "discarder": "Franck",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Ghislaine": "0",
+                        "Franck": "0",
+                        "Halim": "0",
+                        "Richard": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "ghislaine",
+                "fred",
+                "xavier",
+                "jean michel"
+            ],
+            "end_points": [
+                -171,
+                9,
+                181,
+                -19
+            ],
+            "date": "2026-05-02T16:29:36",
+            "rounds": [
+                {
+                    "winner": "xavier",
+                    "discarder": null,
+                    "hand_points": "22",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "ghislaine",
+                    "hand_points": "20",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "ghislaine",
+                    "discarder": "fred",
+                    "hand_points": "16",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "xavier",
+                    "discarder": "ghislaine",
+                    "hand_points": "12",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "ghislaine",
+                    "hand_points": "11",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": "ghislaine",
+                    "hand_points": "11",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "xavier",
+                    "discarder": null,
+                    "hand_points": "8",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "xavier",
+                    "discarder": "fred",
+                    "hand_points": "10",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "fred",
+                    "hand_points": "19",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": null,
+                    "hand_points": "16",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "xavier",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "fred": "0",
+                        "xavier": "0",
+                        "jean michel": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Math\u00e9o",
+                "K\u00e9vin",
+                "S\u00e9bastien",
+                "Halim"
+            ],
+            "end_points": [
+                -78,
+                230,
+                -231,
+                79
+            ],
+            "date": "2026-05-02T16:30:16",
+            "rounds": [
+                {
+                    "winner": "Halim",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "K\u00e9vin",
+                    "discarder": "Math\u00e9o",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "K\u00e9vin",
+                    "discarder": null,
+                    "hand_points": "23",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "K\u00e9vin",
+                    "discarder": "Halim",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": null,
+                    "hand_points": "23",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "K\u00e9vin",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Math\u00e9o",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "K\u00e9vin",
+                    "discarder": "Halim",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Math\u00e9o",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "K\u00e9vin",
+                    "discarder": "Math\u00e9o",
+                    "hand_points": "19",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "K\u00e9vin",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "28",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Math\u00e9o",
+                    "discarder": "S\u00e9bastien",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "S\u00e9bastien",
+                    "discarder": "K\u00e9vin",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Math\u00e9o": "0",
+                        "K\u00e9vin": "0",
+                        "S\u00e9bastien": "0",
+                        "Halim": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Richard",
+                "Laurence N.",
+                "Val\u00e9rie L.",
+                "Anna"
+            ],
+            "end_points": [
+                187,
+                -87,
+                -162,
+                62
+            ],
+            "date": "2026-05-02T16:30:35",
+            "rounds": [
+                {
+                    "winner": "Richard",
+                    "discarder": "Anna",
+                    "hand_points": "23",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Val\u00e9rie L.",
+                    "hand_points": "17",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": "Laurence N.",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": "Val\u00e9rie L.",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Anna",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Laurence N.",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence N.",
+                    "discarder": "Richard",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": "Richard",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Laurence N.",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": "Richard",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Laurence N.",
+                    "discarder": "Anna",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Anna",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Richard": "0",
+                        "Laurence N.": "0",
+                        "Val\u00e9rie L.": "0",
+                        "Anna": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Val\u00e9rie D",
+                "Isabelle",
+                "Marie",
+                "Christophe"
+            ],
+            "end_points": [
+                -93,
+                28,
+                97,
+                -32
+            ],
+            "date": "2026-05-02T16:37:43",
+            "rounds": [
+                {
+                    "winner": "Christophe",
+                    "discarder": "Marie",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Marie",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Val\u00e9rie D",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Christophe",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": null,
+                    "hand_points": "14",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Marie",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Marie",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Isabelle",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": null,
+                    "hand_points": "16",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Marie",
+                    "hand_points": "33",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Val\u00e9rie D": "0",
+                        "Isabelle": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Franck",
+                "Christophe",
+                "Marie",
+                "Isabelle"
+            ],
+            "end_points": [
+                26,
+                47,
+                -59,
+                -14
+            ],
+            "date": "2026-05-02T19:01:27",
+            "rounds": [
+                {
+                    "winner": "Franck",
+                    "discarder": "Isabelle",
+                    "hand_points": "17",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Isabelle",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Isabelle",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Franck",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": null,
+                    "hand_points": "24",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Christophe",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Marie",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Isabelle",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Isabelle",
+                    "hand_points": "26",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Marie",
+                    "hand_points": "26",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Christophe",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Christophe",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Franck",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": null,
+                    "hand_points": "20",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Isabelle",
+                    "hand_points": "26",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Isabelle",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Franck": "0",
+                        "Christophe": "0",
+                        "Marie": "0",
+                        "Isabelle": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Val\u00e9rie L",
+                "Marc",
+                "Halim",
+                "Val\u00e9rie D"
+            ],
+            "end_points": [
+                -121,
+                -44,
+                -29,
+                194
+            ],
+            "date": "2026-05-06T14:12:33",
+            "rounds": [
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": null,
+                    "hand_points": "17",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Marc",
+                    "hand_points": "18",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": null,
+                    "hand_points": "17",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": null,
+                    "hand_points": "17",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Marc",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L",
+                    "discarder": "Halim",
+                    "hand_points": "17",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "26",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Marc",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Halim",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Marc": "0",
+                        "Halim": "0",
+                        "Val\u00e9rie D": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Marie",
+                "Marc",
+                "Doublon",
+                "Halim"
+            ],
+            "end_points": [
+                -19,
+                -170,
+                109,
+                80
+            ],
+            "date": "2026-05-06T16:26:25",
+            "rounds": [
+                {
+                    "winner": "Marie",
+                    "discarder": "Doublon",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Doublon",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Doublon",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marc",
+                    "discarder": "Doublon",
+                    "hand_points": "28",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": null,
+                    "hand_points": "22",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Doublon",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Doublon",
+                    "discarder": null,
+                    "hand_points": "9",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": null,
+                    "hand_points": "14",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Doublon",
+                    "discarder": "Marie",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Doublon",
+                    "discarder": "Marc",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Marc",
+                    "hand_points": "18",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Doublon",
+                    "discarder": "Halim",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Doublon",
+                    "discarder": null,
+                    "hand_points": "28",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": "Doublon",
+                    "discarder": "Marie",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Marie": "0",
+                        "Marc": "0",
+                        "Doublon": "0",
+                        "Halim": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Val\u00e9rie L",
+                "Val\u00e9rie D",
+                "doublon",
+                "Isabelle"
+            ],
+            "end_points": [
+                -251,
+                258,
+                -143,
+                136
+            ],
+            "date": "2026-05-06T16:27:36",
+            "rounds": [
+                {
+                    "winner": "Isabelle",
+                    "discarder": "doublon",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": null,
+                    "hand_points": "18",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "doublon",
+                    "hand_points": "34",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "27",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "doublon",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": null,
+                    "hand_points": "16",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": null,
+                    "hand_points": "20",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Isabelle",
+                    "hand_points": "45",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": "Val\u00e9rie L",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie D",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": "doublon",
+                    "discarder": "Val\u00e9rie D",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Val\u00e9rie L": "0",
+                        "Val\u00e9rie D": "0",
+                        "doublon": "0",
+                        "Isabelle": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Isabelle",
+                "Halim",
+                "Marie",
+                "Christophe"
+            ],
+            "end_points": [
+                42,
+                -62,
+                122,
+                -102
+            ],
+            "date": "2026-05-06T19:18:21",
+            "rounds": [
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Christophe",
+                    "hand_points": "21",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Christophe",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": null,
+                    "hand_points": "18",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Halim",
+                    "hand_points": "33",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Halim",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Christophe",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Marie",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Halim",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Halim",
+                    "discarder": "Isabelle",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Christophe",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Marie",
+                    "discarder": "Isabelle",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": "Christophe",
+                    "discarder": "Marie",
+                    "hand_points": "30",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Isabelle": "0",
+                        "Halim": "0",
+                        "Marie": "0",
+                        "Christophe": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "halim",
+                "laurence",
+                "jean michel",
+                "fred"
+            ],
+            "end_points": [
+                -154,
+                15,
+                35,
+                104
+            ],
+            "date": "2026-05-09T14:03:01",
+            "rounds": [
+                {
+                    "winner": "halim",
+                    "discarder": "jean michel",
+                    "hand_points": "13",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "laurence",
+                    "hand_points": "13",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "laurence",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "laurence",
+                    "discarder": "halim",
+                    "hand_points": "12",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "fred",
+                    "hand_points": "13",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": "jean michel",
+                    "hand_points": "13",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": "laurence",
+                    "hand_points": "11",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "laurence",
+                    "discarder": "jean michel",
+                    "hand_points": "14",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "halim",
+                    "hand_points": "10",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": "laurence",
+                    "hand_points": "19",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "fred",
+                    "discarder": "jean michel",
+                    "hand_points": "13",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "halim",
+                    "hand_points": "18",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": "laurence",
+                    "discarder": "jean michel",
+                    "hand_points": "19",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "halim": "0",
+                        "laurence": "0",
+                        "jean michel": "0",
+                        "fred": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Fran\u00e7oise",
+                "Delphine",
+                "Valerie D",
+                "Juliette"
+            ],
+            "end_points": [
+                -155,
+                98,
+                -70,
+                127
+            ],
+            "date": "2026-05-09T14:03:02",
+            "rounds": [
+                {
+                    "winner": "Juliette",
+                    "discarder": "Fran\u00e7oise",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Fran\u00e7oise",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Valerie D",
+                    "discarder": null,
+                    "hand_points": "14",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": "Fran\u00e7oise",
+                    "hand_points": "23",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Valerie D",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Valerie D",
+                    "discarder": "Delphine",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": "Valerie D",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Fran\u00e7oise",
+                    "discarder": "Juliette",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Delphine",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": "Valerie D",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": "Valerie D",
+                    "hand_points": "17",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Delphine": "0",
+                        "Valerie D": "0",
+                        "Juliette": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Franck",
+                "Marie-anne",
+                "Fred",
+                "Anna"
+            ],
+            "end_points": [
+                -105,
+                -41,
+                133,
+                13
+            ],
+            "date": "2026-05-09T14:03:20",
+            "rounds": [
+                {
+                    "winner": "Marie-anne",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Franck",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Anna",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Franck",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": null,
+                    "hand_points": "21",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Anna",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": "Marie-anne",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": "Fred",
+                    "hand_points": "19",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": "Anna",
+                    "discarder": "Franck",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Franck": "0",
+                        "Marie-anne": "0",
+                        "Fred": "0",
+                        "Anna": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Val\u00e9rie L.",
+                "Matheo",
+                "B\u00e9atrice",
+                "Richard"
+            ],
+            "end_points": [
+                -46,
+                -71,
+                -55,
+                172
+            ],
+            "date": "2026-05-09T14:04:24",
+            "rounds": [
+                {
+                    "winner": "B\u00e9atrice",
+                    "discarder": "Richard",
+                    "hand_points": "21",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Matheo",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "B\u00e9atrice",
+                    "discarder": "Val\u00e9rie L.",
+                    "hand_points": "21",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Matheo",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Matheo",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Matheo",
+                    "hand_points": "27",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L.",
+                    "discarder": "Richard",
+                    "hand_points": "27",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "B\u00e9atrice",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Val\u00e9rie L.",
+                    "discarder": "Matheo",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Matheo",
+                    "discarder": null,
+                    "hand_points": "14",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Matheo",
+                    "discarder": "B\u00e9atrice",
+                    "hand_points": "22",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": "Richard",
+                    "discarder": "Matheo",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Val\u00e9rie L.": "0",
+                        "Matheo": "0",
+                        "B\u00e9atrice": "0",
+                        "Richard": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Fran\u00e7oise",
+                "Juliette",
+                "Rapha\u00ebl",
+                "Marie-Anne"
+            ],
+            "end_points": [
+                97,
+                66,
+                16,
+                -179
+            ],
+            "date": "2026-05-09T16:38:11",
+            "rounds": [
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": "Marie-Anne",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Fran\u00e7oise",
+                    "discarder": null,
+                    "hand_points": "8",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": "Fran\u00e7oise",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Fran\u00e7oise",
+                    "discarder": "Marie-Anne",
+                    "hand_points": "23",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Rapha\u00ebl",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": "Marie-Anne",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Fran\u00e7oise",
+                    "discarder": null,
+                    "hand_points": "21",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": null,
+                    "hand_points": "12",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Rapha\u00ebl",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Rapha\u00ebl",
+                    "discarder": "Juliette",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": "Juliette",
+                    "discarder": "Rapha\u00ebl",
+                    "hand_points": "8",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Fran\u00e7oise": "0",
+                        "Juliette": "0",
+                        "Rapha\u00ebl": "0",
+                        "Marie-Anne": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "ghislaine",
+                "christophe",
+                "richard",
+                "jean michel"
+            ],
+            "end_points": [
+                -70,
+                -196,
+                194,
+                72
+            ],
+            "date": "2026-05-09T16:39:03",
+            "rounds": [
+                {
+                    "winner": "richard",
+                    "discarder": "ghislaine",
+                    "hand_points": "9",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "richard",
+                    "discarder": "jean michel",
+                    "hand_points": "10",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "richard",
+                    "discarder": "jean michel",
+                    "hand_points": "9",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "richard",
+                    "discarder": "jean michel",
+                    "hand_points": "11",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": null,
+                    "hand_points": "24",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": null,
+                    "hand_points": "23",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "ghislaine",
+                    "discarder": "christophe",
+                    "hand_points": "12",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "richard",
+                    "discarder": "christophe",
+                    "hand_points": "15",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "richard",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "richard",
+                    "discarder": "ghislaine",
+                    "hand_points": "13",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "ghislaine",
+                    "discarder": "richard",
+                    "hand_points": "12",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "ghislaine",
+                    "discarder": "jean michel",
+                    "hand_points": "11",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "richard",
+                    "discarder": "jean michel",
+                    "hand_points": "12",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": "jean michel",
+                    "discarder": "ghislaine",
+                    "hand_points": "10",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "ghislaine": "0",
+                        "christophe": "0",
+                        "richard": "0",
+                        "jean michel": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Kevin",
+                "Fred",
+                "Franck",
+                "Delphine"
+            ],
+            "end_points": [
+                -4,
+                44,
+                101,
+                -141
+            ],
+            "date": "2026-05-09T16:39:53",
+            "rounds": [
+                {
+                    "winner": "Kevin",
+                    "discarder": "Fred",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Kevin",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Delphine",
+                    "hand_points": "26",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": null,
+                    "hand_points": "26",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": "Franck",
+                    "hand_points": "22",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": "Fred",
+                    "hand_points": "14",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Franck",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Franck",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin",
+                    "discarder": "Fred",
+                    "hand_points": "22",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin",
+                    "discarder": null,
+                    "hand_points": "13",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Kevin": "0",
+                        "Fred": "0",
+                        "Franck": "0",
+                        "Delphine": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
+                "Fred",
+                "Isabelle",
+                "Delphine",
+                "Kevin"
+            ],
+            "end_points": [
+                149,
+                -148,
+                2,
+                -3
+            ],
+            "date": "2026-05-09T18:45:26",
+            "rounds": [
+                {
+                    "winner": "Fred",
+                    "discarder": "Delphine",
+                    "hand_points": "30",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Isabelle",
+                    "hand_points": "19",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Delphine",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin",
+                    "discarder": "Fred",
+                    "hand_points": "16",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Isabelle",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin",
+                    "discarder": "Isabelle",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": null,
+                    "hand_points": "29",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin",
+                    "discarder": "Isabelle",
+                    "hand_points": "24",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Isabelle",
+                    "discarder": "Delphine",
+                    "hand_points": "15",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Isabelle",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": null,
+                    "hand_points": "15",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Fred",
+                    "discarder": "Kevin",
+                    "hand_points": "19",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Delphine",
+                    "discarder": "Fred",
+                    "hand_points": "12",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                },
+                {
+                    "winner": "Kevin",
+                    "discarder": null,
+                    "hand_points": "11",
+                    "penalties": {
+                        "Fred": "0",
+                        "Isabelle": "0",
+                        "Delphine": "0",
+                        "Kevin": "0"
+                    }
+                }
+            ]
         }
     ],
     "players": [
@@ -73886,6 +78100,9 @@
         "Yiting": "Yiting",
         "Florian": "Florian",
         "Laurence N": "Laurence",
-        "Valerie Dolle": "Valerie D"
+        "Valerie Dolle": "Valerie D",
+        "Marie-anne": "Marie-Anne",
+        "Laurence N.": "Laurence",
+        "LaurenceN": "Laurence"
     }
 }
