@@ -90054,6 +90054,144 @@
         },
         {
             "players": [
+                "Guileme",
+                "Francoise",
+                "Marie Anne",
+                "Fabienne"
+            ],
+            "end_points": [
+                36,
+                -94,
+                -38,
+                96
+            ],
+            "date": "2026-06-13T16:27:43",
+            "rounds": [
+                {
+                    "winner": "Guileme",
+                    "discarder": null,
+                    "hand_points": "10",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Marie Anne",
+                    "discarder": null,
+                    "hand_points": "9",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Guileme",
+                    "discarder": "Fabienne",
+                    "hand_points": "13",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Fabienne",
+                    "discarder": "Marie Anne",
+                    "hand_points": "11",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Guileme",
+                    "discarder": "Francoise",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Fabienne",
+                    "discarder": null,
+                    "hand_points": "20",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Guileme",
+                    "discarder": "Fabienne",
+                    "hand_points": "10",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Francoise",
+                    "discarder": "Guileme",
+                    "hand_points": "20",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Fabienne",
+                    "discarder": null,
+                    "hand_points": "17",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": "Marie Anne",
+                    "discarder": "Guileme",
+                    "hand_points": "9",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                },
+                {
+                    "winner": null,
+                    "discarder": null,
+                    "hand_points": "0",
+                    "penalties": {
+                        "Guileme": "0",
+                        "Francoise": "0",
+                        "Marie Anne": "0",
+                        "Fabienne": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "players": [
                 "Jean Michel",
                 "Val\u00e9rie L",
                 "Rapha\u00ebl",
@@ -91152,6 +91290,7 @@
         "beatrice": "Beatrice",
         "yiting": "Yiting",
         "marie anne": "Marie-Anne",
-        "Groshlem": "Guilhem"
+        "Groshlem": "Guilhem",
+        "Guileme": "Guilhem"
     }
 }
