@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from data import *
 import os
+from pprint import pprint
 
 class Visualizer:
     def __init__(self, data: Data):
@@ -231,4 +232,25 @@ class Visualizer:
                     stats[a2][a1]['win_rate'] = stats[a2][a1]['nb_wins'] / stats[a2][a1]['nb_total']
                     stats[a1][a2]['smoothed_rate'] = (stats[a1][a2]['nb_wins'] + alpha) / (stats[a1][a2]['nb_total'] + 2 * alpha)
                     stats[a2][a1]['smoothed_rate'] = (stats[a2][a1]['nb_wins'] + alpha) / (stats[a2][a1]['nb_total'] + 2 * alpha)
+        return stats
+
+    def calc_total_winrate(self) -> dict[str, list[int]]:
+        """
+        Calculates the winrate of each player for each placement
+        return winrate tab : {player: [1st place amount, 2nd place amount, ...]}
+        """
+        stats = {}
+        players = [p.name for p in self.data.players]
+        for p in players:
+            stats[p] = [0.0 for i in range(4)]
+        for game in self.data.games:
+            sorted_points = sorted(game.end_points, reverse=True)
+            for wind in range(4):
+                player_name = self.data.aliases[game.players[wind]]
+                places = []
+                for place in range(4):
+                    if game.end_points[wind] == sorted_points[place]:
+                        places.append(place)
+                for place in places:
+                    stats[player_name][place] += 1 / len(places)
         return stats
