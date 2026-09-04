@@ -184,6 +184,12 @@ class Data:
 
         self.aliases[alias] = player_name
         return (0, "")
+
+    def get_player_id(self, player_name: str) -> int:
+        for i in range(len(self.players)):
+            if player_name == self.players[i]:
+                return i
+        return -1
     
     def remove_player(self, player_name: str) -> tuple[int, str]:
         if not(player_name) in self.players:

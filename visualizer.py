@@ -263,15 +263,102 @@ class Visualizer:
         stats = {}
         players = [p.name for p in self.data.players]
         for p in players:
-            stats[p] = [0.0 for i in range(4)]
+            stats[p] = {}
         for game in self.data.games:
             sorted_points = sorted(game.end_points, reverse=True)
+            month = game.date.month
             for wind in range(4):
                 player_name = self.data.aliases[game.players[wind]]
+                if month not in stats[player_name]:
+                    stats[player_name][month] = [0.0 for i in range(4)]
                 places = []
                 for place in range(4):
                     if game.end_points[wind] == sorted_points[place]:
                         places.append(place)
                 for place in places:
-                    stats[player_name][place] += 1 / len(places)
+                    stats[player_name][month][place] += 1 / len(places)
+        return stats
+
+    def calc_placement_list(self) -> dict[str, dict[str, list[int]]]:
+        """
+        Calculates the placement list of each player for each month
+        return placement tab : {player: month: [1st match result, 2nd match result, ...]}
+        """
+        stats = {}
+        players = [p.name for p in self.data.players]
+        for p in players:
+            stats[p] = {}
+        for game in self.data.games:
+            sorted_points = sorted(game.end_points, reverse=True)
+            month = game.date.month
+            for wind in range(4):
+                player_name = self.data.aliases[game.players[wind]]
+                if month not in stats[player_name]:
+                    stats[player_name][month] = []
+                places = []
+                for place in range(4):
+                    if game.end_points[wind] == sorted_points[place]:
+                        places.append(place+1)
+                stats[player_name][month].append(sum(places) / len(places))
+        return stats
+
+    def calc_record_hand_stats(self, n = 5) -> dict[str, list]:
+        """
+        Calculates a handful of records about individual hands.
+        Records calculated :
+          - best hand (alias 'best_hand'), format : [(player, 1st best hand), (player, 2nd best hand), ...] up to n
+          - best self drawn hand (alias 'best_drawn_hand'), format : [(player, 1st best hand), (player, 2nd best hand), ...] up to n
+        """
+        stats = {
+            "best_hand": [],
+            "best_drawn_hand": [],
+        }
+        for game in self.data.games:
+            if game.rounds is not None:
+                for rnd in game.rounds:
+                    if rnd.winner is not None:
+                        stats["best_hand"].append((self.data.aliases[rnd.winner], rnd.hand_points))
+                        if rnd.discarder is None:
+                            stats["best_drawn_hand"].append((self.data.aliases[rnd.winner], rnd.hand_points))
+        stats["best_hand"].sort(key = lambda x: x[1], reverse=True)
+        stats["best_drawn_hand"].sort(key = lambda x: x[1], reverse=True)
+        stats["best_hand"] = stats["best_hand"][:n]
+        stats["best_drawn_hand"] = stats["best_drawn_hand"][:n]
+        return stats
+
+    def calc_record_game_stats(self, n = 5) -> dict[str, list]:
+        """
+        Calculates a handful of records about individual games.
+        Records calculated :
+          - best upset (alias 'best_upset'), format : [(winning player, losing player, elo difference), ...] up to n
+          - best final score (alias 'best_score'), format : [(player, 1st best score), (player, 2nd best score), ...] up to n
+          - worst final score (alias 'worst_score'), format : [(player, 1st worst score), (player, 2nd worst score), ...] up to n
+        """
+        stats = {
+            "best_upset": [],
+            "best_score": [],
+        }
+        for igame, game in enumerate(self.data.games):
+            for wind in range(4):
+                player_name = self.data.aliases[game.players[wind]]
+                stats["best_score"].append((player_name, game.end_points[wind]))
+                for other_wind in range(wind):
+                    other_name = self.data.aliases[game.players[other_wind]]
+                    if igame == 0:
+                        other_elo = self.data.players[self.data.get_player_id(other_name)].base_elo
+                        player_elo = self.data.players[self.data.get_player_id(player_name)].base_elo
+                    else:
+                        other_elo = self.data.elo[igame-1][other_name]
+                        player_elo = self.data.elo[igame-1][player_name]
+                    elo_diff = other_elo - player_elo
+                    player_won = game.end_points[wind] > game.end_points[other_wind]
+                    if player_won:
+                        stats["best_upset"].append((player_name, other_name, elo_diff))
+                    else:
+                        stats["best_upset"].append((other_name, player_name, -elo_diff))
+        stats["best_upset"].sort(key = lambda x: x[2], reverse=True)
+        stats["best_score"].sort(key = lambda x: x[1], reverse=True)
+        stats["worst_score"] = stats["best_score"][-n:][::-1]
+        stats["best_score"] = stats["best_score"][:n]
+        stats["best_upset"] = stats["best_upset"][:n]
         return stats

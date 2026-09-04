@@ -17,8 +17,11 @@ if Path(DATA_SAVE_FILE).exists():
 loader = DataLoader(data)
 visualizer = Visualizer(data)
 
-visualizer.calc_total_winrate()
-
+pprint(visualizer.calc_total_winrate())
+pprint(visualizer.calc_monthly_winrate())
+pprint(visualizer.calc_placement_list())
+pprint(visualizer.calc_record_hand_stats())
+pprint(visualizer.calc_record_game_stats())
 quit()
 
 continuer = True
