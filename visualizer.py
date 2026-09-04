@@ -362,3 +362,32 @@ class Visualizer:
         stats["best_score"] = stats["best_score"][:n]
         stats["best_upset"] = stats["best_upset"][:n]
         return stats
+
+    def calc_hand_stats(self) -> dict[str, dict[str, Any]]:
+        """
+        Calculates a handful of statistics about hands of players.
+        Stats calculated :
+          - winning hands (alias 'won'), format : dict
+            - proportion of won hands (alias 'win_prob')
+            - proportion of self-drawn hands among won hands (alias 'self_prob')
+            - average value of hand (alias 'avg_value')
+            - repartition of values (alias 'value_rep'), format : [(value1, count1), ...]
+          - proportion of walls (alias 'wall'), format : float
+          - dealt-in hands (alias 'deal_in'), format : dict
+            - proportion of deal-in (alias 'deal_in_prob')
+            - average value of deal-in (alias 'avg_value')
+            - repartition of values (alias 'value_rep'), format : [(value1, count1), ...]
+        """
+        stats = {}
+        players = [p.name for p in self.data.players]
+        for p in players:
+            stats[p] = {
+                'won': [],
+                'wall': 0,
+                'deal_in': [],
+                'other': []
+            }
+        for game in self.data.games:
+            if game.rounds is not None:
+                for rnd in game.rounds:
+                    
