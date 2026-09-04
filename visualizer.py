@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 from data import *
 import os
 from pprint import pprint
+from statistics import mean
+from typing import Any
 
 class Visualizer:
     def __init__(self, data: Data):
@@ -371,23 +373,58 @@ class Visualizer:
             - proportion of won hands (alias 'win_prob')
             - proportion of self-drawn hands among won hands (alias 'self_prob')
             - average value of hand (alias 'avg_value')
-            - repartition of values (alias 'value_rep'), format : [(value1, count1), ...]
+            - list of values (alias 'value_list')
           - proportion of walls (alias 'wall'), format : float
           - dealt-in hands (alias 'deal_in'), format : dict
             - proportion of deal-in (alias 'deal_in_prob')
             - average value of deal-in (alias 'avg_value')
-            - repartition of values (alias 'value_rep'), format : [(value1, count1), ...]
+            - list of values (alias 'value_list')
+        - total hands played (alias 'total')
         """
+        # Stats initialization
         stats = {}
         players = [p.name for p in self.data.players]
         for p in players:
             stats[p] = {
-                'won': [],
+                'won': {'value_list': [], 'self_prob': 0},
                 'wall': 0,
-                'deal_in': [],
-                'other': []
+                'deal_in': {'value_list': []},
+                'total': 0
             }
+
+        # Stats querying
         for game in self.data.games:
             if game.rounds is not None:
                 for rnd in game.rounds:
-                    
+                    for alias in game.players:
+                        player_name = self.data.aliases[alias]
+                        if rnd.winner is None:
+                            stats[player_name]['wall'] += 1
+                        elif rnd.winner == alias:
+                            stats[player_name]['won']['value_list'].append(rnd.hand_points)
+                            if rnd.discarder is None:
+                                stats[player_name]['won']['self_prob'] += 1
+                        elif rnd.discarder == alias:
+                            stats[player_name]['deal_in']['value_list'].append(rnd.hand_points)
+                        stats[player_name]['total'] += 1
+
+        # Stats grouping
+        for p in players:
+            total_rounds = stats[p]['total']
+            if total_rounds == 0:
+                del stats[p]
+            else:
+                stats[p]['won']['win_prob'] = len(stats[p]['won']['value_list']) / total_rounds
+                if len(stats[p]['won']['value_list']) > 0:
+                    stats[p]['won']['self_prob'] /= len(stats[p]['won']['value_list'])
+                    stats[p]['won']['avg_value'] = mean(stats[p]['won']['value_list'])
+                else:
+                    stats[p]['won']['self_prob'] = 0.0
+                    stats[p]['won']['avg_value'] = 0.0
+                stats[p]['wall'] /= total_rounds
+                stats[p]['deal_in']['deal_in_prob'] = len(stats[p]['deal_in']['value_list']) / total_rounds
+                if len(stats[p]['deal_in']['value_list']) > 0:
+                    stats[p]['deal_in']['avg_value'] = mean(stats[p]['deal_in']['value_list'])
+                else:
+                    stats[p]['deal_in']['avg_value'] = 0.0
+        return stats

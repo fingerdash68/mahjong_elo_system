@@ -33,8 +33,8 @@ class Round:
         return Round(
             winner = data['winner'],
             discarder = data['discarder'],
-            hand_points = data['hand_points'],
-            penalties = data['penalties']
+            hand_points = int(data['hand_points']),
+            penalties = {key: int(val) for key, val in data['penalties'].items()}
         )
 
     def __str__(self):
