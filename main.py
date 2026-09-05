@@ -22,7 +22,9 @@ visualizer = Visualizer(data)
 # pprint(visualizer.calc_placement_list())
 # pprint(visualizer.calc_record_hand_stats())
 # pprint(visualizer.calc_record_game_stats())
-pprint(visualizer.calc_hand_stats())
+# pprint(visualizer.calc_hand_stats())
+# pprint(visualizer.calc_opponent_winrate())
+pprint(visualizer.calc_mid_game_evolution())
 quit()
 
 continuer = True

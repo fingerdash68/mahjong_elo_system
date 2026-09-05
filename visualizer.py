@@ -246,13 +246,9 @@ class Visualizer:
         for p in players:
             stats[p] = [0.0 for i in range(4)]
         for game in self.data.games:
-            sorted_points = sorted(game.end_points, reverse=True)
             for wind in range(4):
                 player_name = self.data.aliases[game.players[wind]]
-                places = []
-                for place in range(4):
-                    if game.end_points[wind] == sorted_points[place]:
-                        places.append(place)
+                places = self._calc_placement_list_from_scores(game.end_points[wind], game.end_points)
                 for place in places:
                     stats[player_name][place] += 1 / len(places)
         return stats
@@ -267,16 +263,12 @@ class Visualizer:
         for p in players:
             stats[p] = {}
         for game in self.data.games:
-            sorted_points = sorted(game.end_points, reverse=True)
             month = game.date.month
             for wind in range(4):
                 player_name = self.data.aliases[game.players[wind]]
                 if month not in stats[player_name]:
                     stats[player_name][month] = [0.0 for i in range(4)]
-                places = []
-                for place in range(4):
-                    if game.end_points[wind] == sorted_points[place]:
-                        places.append(place)
+                places = self._calc_placement_list_from_scores(game.end_points[wind], game.end_points)
                 for place in places:
                     stats[player_name][month][place] += 1 / len(places)
         return stats
@@ -291,16 +283,12 @@ class Visualizer:
         for p in players:
             stats[p] = {}
         for game in self.data.games:
-            sorted_points = sorted(game.end_points, reverse=True)
             month = game.date.month
             for wind in range(4):
                 player_name = self.data.aliases[game.players[wind]]
                 if month not in stats[player_name]:
                     stats[player_name][month] = []
-                places = []
-                for place in range(4):
-                    if game.end_points[wind] == sorted_points[place]:
-                        places.append(place+1)
+                places = self._calc_placement_list_from_scores(game.end_points[wind], game.end_points)
                 stats[player_name][month].append(sum(places) / len(places))
         return stats
 
@@ -428,3 +416,72 @@ class Visualizer:
                 else:
                     stats[p]['deal_in']['avg_value'] = 0.0
         return stats
+
+    def calc_opponent_winrate(self) -> dict[str, dict[str, dict[str, float]]]:
+        """
+        Calculates the number of times each player got placed better than each other player.
+        A draw counts as half a better place. The total games played is found in the self player's field.
+        return frequency dict : {player: {other1: {'won':..., 'total':...}}}
+        """
+        stats = {}
+        players = [p.name for p in self.data.players]
+        for p in players:
+            stats[p] = {}
+            for p2 in players:
+                stats[p][p2] = {'won': 0.0, 'total': 0.0}
+        for game in self.data.games:
+            for wind in range(4):
+                for other_wind in range(4):
+                    player_name = self.data.aliases[game.players[wind]]
+                    other_name = self.data.aliases[game.players[other_wind]]
+                    if game.end_points[wind] > game.end_points[other_wind]:
+                        stats[player_name][other_name]['won'] += 1.0
+                    elif game.end_points[wind] == game.end_points[other_wind]:
+                        stats[player_name][other_name]['won'] += 0.5
+                    stats[player_name][other_name]['total'] += 1.0
+        return stats
+
+    def calc_mid_game_evolution(self) -> dict[str, list[list[float]]]:
+        """
+        Calculates the evolution of the players placements from midgame to endgame.
+        return evolution tab : {player: [1st midgame: [1st endgame, 2nd endgame, ...], 2nd midgame: [...], ...]}
+        """
+        stats = {}
+        players = [p.name for p in self.data.players]
+        for p in players:
+            stats[p] = [[0.0 for i in range(4)] for j in range(4)]
+        for game in self.data.games:
+            if game.rounds is not None:
+                scores = {}
+                for player_name in game.players:
+                    scores[player_name] = 0
+                for rnd in game.rounds[:len(game.rounds)//2]:
+                    if rnd.winner is not None:
+                        for player_name in game.players:
+                            if player_name != rnd.winner:
+                                scores[player_name] -= 8
+                                scores[rnd.winner] += 8
+                            if player_name == rnd.discarder or rnd.discarder is None:
+                                scores[player_name] -= rnd.hand_points
+                                scores[rnd.winner] += rnd.hand_points
+                score_list = [scores[p] for p in game.players]
+                for wind in range(4):
+                    player_name = self.data.aliases[game.players[wind]]
+                    mid_places = self._calc_placement_list_from_scores(score_list[wind], score_list)
+                    end_places = self._calc_placement_list_from_scores(game.end_points[wind], game.end_points)
+                    nb_places = len(mid_places) * len(end_places)
+                    for mid in mid_places:
+                        for end in end_places:
+                            stats[player_name][mid][end] += 1 / nb_places
+        return stats
+
+    def _calc_placement_list_from_scores(self, score: int, scores: list[int]):
+        """
+        Returns the list of places that got the same score as the player
+        """
+        places = []
+        sorted_scores = sorted(scores, reverse=True)
+        for i in range(len(scores)):
+            if sorted_scores[i] == score:
+                places.append(i)
+        return places
