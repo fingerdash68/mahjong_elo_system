@@ -182,11 +182,11 @@ class Visualizer:
             os.makedirs(player_folder, exist_ok=True)
 
             placement_colors = ["#2EAD69","#66C2A5","#F6C453","#E45756"]
-            placement_labels = ["1st", "2nd", "3rd", "4th"]
+            placement_labels = ["1er", "2e", "3e", "4e"]
             months_labels = ["", "Jan", "Fev", "Mars", "Avr", "Mai", "Juin", "Juil", "Aout", "Sep", "Oct", "Nov", "Dec"]
 
-            fig = plt.figure()
-            gs = fig.add_gridspec(4, 5)
+            fig = plt.figure(figsize=(12, 8))
+            gs = fig.add_gridspec(6, 5)
 
             # ==================================================
             # Total winrate
@@ -202,7 +202,7 @@ class Visualizer:
                 autopct="%1.1f%%",
                 colors=colors
             )
-            total_ax.set_title(f"{player} - Total winrate")
+            total_ax.set_title(f"{player} - Taux de victoire")
 
             # ==================================================
             # Monthly winrate
@@ -213,25 +213,58 @@ class Visualizer:
                 ax_col = i % ((len(months) + 1)//2)
                 month_ax = fig.add_subplot(gs[ax_row, ax_col])
                 if month not in monthly_winrate[player]:
-                    month_ax.pie(
-                        [1],
-                        labels=["Vide"],
-                        colors=["white"]
-                    )
+                    month_ax.pie([1], colors=["white"])
+                    month_ax.text(0, 0, "Aucune partie", ha="center", va="center")
                 else:
                     filtered = [(value, label, color) for value, label, color in zip(monthly_winrate[player][month], placement_labels, placement_colors) if value > 0]
                     values, labels, colors = zip(*filtered)
-                    month_ax.pie(
-                        values,
-                        labels=labels,
-                        autopct="%1.0f%%",
-                        colors=colors
-                    )
+                    if len(values) == 1:
+                        month_ax.pie(values, labels=labels, colors=colors, textprops={"fontsize": 8})
+                        month_ax.text(0, 0, "100%", ha="center", va="center", fontsize=8)
+                    else:
+                        month_ax.pie(
+                            values,
+                            labels=labels,
+                            autopct="%1.0f%%",
+                            colors=colors,
+                            textprops={"fontsize": 8}
+                        )
                 month_ax.set_title(months_labels[month])
+
+            # ==================================================
+            # Individual games
+            # ==================================================
+
+            full_placement = []
+            for places in placement_list[player].values():
+                full_placement.extend(places)
+            indiv_ax = fig.add_subplot(gs[4:, :])
+            indiv_ax.plot(range(1, len(full_placement)+1), full_placement)
+            for i, place in enumerate(full_placement):
+                indiv_ax.plot(i+1, place, marker="o", markersize=2, color=placement_colors[int(place)])
+
+            indiv_ax.set_yticks(
+                range(4),
+                labels=placement_labels,
+            )
+            indiv_ax.invert_yaxis()
+            for place in range(4):
+                indiv_ax.axhline(place, color="#999999", linewidth=0.5, linestyle="--")
+
+            indiv_ax.set_xlabel("Nombre de parties")
+            nb_games = 0
+            x_ticks = []
+            x_ticks_labels = []
+            for month, places in placement_list[player].items():
+                nb_games += len(places)
+                indiv_ax.axvline(nb_games + 0.5, color="#999999", linewidth=0.75, linestyle="-")
+                x_ticks.append(nb_games - len(places)/2 + 0.5)
+                x_ticks_labels.append(months_labels[month])
+            indiv_ax.set_xticks(x_ticks)
+            indiv_ax.set_xticklabels(x_ticks_labels, rotation=45)
 
             fig.savefig(os.path.join(player_folder, "winrate.png"))
             plt.close(fig)
-
 
 
 
@@ -355,7 +388,7 @@ class Visualizer:
                     stats[player_name][month][place] += 1 / len(places)
         return stats
 
-    def calc_placement_list(self) -> dict[str, dict[str, list[int]]]:
+    def calc_placement_list(self) -> dict[str, dict[int, list[int]]]:
         """
         Calculates the placement list of each player for each month
         return placement tab : {player: month: [1st match result, 2nd match result, ...]}
