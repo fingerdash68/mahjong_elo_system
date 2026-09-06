@@ -6,7 +6,7 @@ import json
 from pprint import pprint
 import matplotlib.pyplot as plt
 
-DATA_SAVE_FILE = "./games.json"
+DATA_SAVE_FILE = "./full_game_test.json"
 IMPORT_FOLDER = "./import_files/"
 
 data = Data()
@@ -24,7 +24,8 @@ visualizer = Visualizer(data)
 # pprint(visualizer.calc_record_game_stats())
 # pprint(visualizer.calc_hand_stats())
 # pprint(visualizer.calc_opponent_winrate())
-pprint(visualizer.calc_mid_game_evolution())
+# pprint(visualizer.calc_mid_game_evolution())
+visualizer.plot_winrate("stats")
 quit()
 
 continuer = True

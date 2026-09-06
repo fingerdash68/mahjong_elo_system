@@ -155,6 +155,88 @@ class Visualizer:
                 print(", ...", end="")
             print(")")
 
+    def plot_winrate(self, folder: str):
+        """
+        Creates a winrate graph for each player and saves it as:
+            folder/player_name/winrate.png
+
+        The graph contains:
+            - Total placement distribution
+            - Monthly placement distributions
+            - Placement of every individual game
+        """
+        total_winrate = self.calc_total_winrate()
+        monthly_winrate = self.calc_monthly_winrate()
+        placement_list = self.calc_placement_list()
+        players = [p.name for p in self.data.players]
+        # Find all months that appear in the tournament
+        months = sorted({
+            month
+            for player in monthly_winrate.values()
+            for month in player
+        }, key = lambda x: (x - 9) % 12)
+
+        for player in players[:]:
+            # Create player directory
+            player_folder = os.path.join(folder, player)
+            os.makedirs(player_folder, exist_ok=True)
+
+            placement_colors = ["#2EAD69","#66C2A5","#F6C453","#E45756"]
+            placement_labels = ["1st", "2nd", "3rd", "4th"]
+            months_labels = ["", "Jan", "Fev", "Mars", "Avr", "Mai", "Juin", "Juil", "Aout", "Sep", "Oct", "Nov", "Dec"]
+
+            fig = plt.figure()
+            gs = fig.add_gridspec(4, 5)
+
+            # ==================================================
+            # Total winrate
+            # ==================================================
+
+            total_ax = fig.add_subplot(gs[:2, :])
+
+            filtered = [(value, label, color) for value, label, color in zip(total_winrate[player], placement_labels, placement_colors) if value > 0]
+            values, labels, colors = zip(*filtered)
+            total_ax.pie(
+                values,
+                labels=labels,
+                autopct="%1.1f%%",
+                colors=colors
+            )
+            total_ax.set_title(f"{player} - Total winrate")
+
+            # ==================================================
+            # Monthly winrate
+            # ==================================================
+
+            for i, month in enumerate(months):
+                ax_row = i // ((len(months) + 1)//2) + 2
+                ax_col = i % ((len(months) + 1)//2)
+                month_ax = fig.add_subplot(gs[ax_row, ax_col])
+                if month not in monthly_winrate[player]:
+                    month_ax.pie(
+                        [1],
+                        labels=["Vide"],
+                        colors=["white"]
+                    )
+                else:
+                    filtered = [(value, label, color) for value, label, color in zip(monthly_winrate[player][month], placement_labels, placement_colors) if value > 0]
+                    values, labels, colors = zip(*filtered)
+                    month_ax.pie(
+                        values,
+                        labels=labels,
+                        autopct="%1.0f%%",
+                        colors=colors
+                    )
+                month_ax.set_title(months_labels[month])
+
+            fig.savefig(os.path.join(player_folder, "winrate.png"))
+            plt.close(fig)
+
+
+
+
+
+
     def calc_winning_wind_full_game(self) -> dict[str, list[list[tuple]]]:
         """
         Calculates the frequency of winning a game for each player and each wind
@@ -253,7 +335,7 @@ class Visualizer:
                     stats[player_name][place] += 1 / len(places)
         return stats
 
-    def calc_monthly_winrate(self) -> dict[str, dict[str, list[int]]]:
+    def calc_monthly_winrate(self) -> dict[str, dict[int, list[int]]]:
         """
         Calculates the winrate of each player for each month
         return winrate tab : {player: month: [1st place amount, 2nd place amount, ...]}
