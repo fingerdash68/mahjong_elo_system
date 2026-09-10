@@ -2,6 +2,7 @@ import matplotlib
 # print(matplotlib.get_backend())
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 from data import *
 import os
 from pprint import pprint
@@ -163,7 +164,7 @@ class Visualizer:
     def plot_winrate(self, folder: str):
         """
         Creates a winrate graph for each player and saves it as:
-            folder/player_name/winrate.png
+            folder/player_name/taux_de_victoire.png
 
         The graph contains:
             - Total placement distribution
@@ -193,13 +194,13 @@ class Visualizer:
             months_labels = ["", "Jan", "Fev", "Mars", "Avr", "Mai", "Juin", "Juil", "Aout", "Sep", "Oct", "Nov", "Dec"]
 
             fig = plt.figure(figsize=(12, 8))
-            gs = fig.add_gridspec(6, 5)
+            gs = fig.add_gridspec(13, 10)
 
             # ==================================================
             # Total winrate
             # ==================================================
 
-            total_ax = fig.add_subplot(gs[:2, :])
+            total_ax = fig.add_subplot(gs[:3, :])
 
             filtered = [(value, label, color) for value, label, color in zip(total_winrate[player], placement_labels, placement_colors) if value > 0]
             values, labels, colors = zip(*filtered)
@@ -209,16 +210,19 @@ class Visualizer:
                 autopct="%1.1f%%",
                 colors=colors
             )
-            total_ax.set_title(f"{player} - Taux de victoire")
+            total_ax.set_title(f"{player} - Taux de victoire", fontsize=14, pad=10)
 
             # ==================================================
             # Monthly winrate
             # ==================================================
 
+            title_ax = fig.add_subplot(gs[3:4, :])
+            title_ax.axis("off")
+            title_ax.text(0.5, 1, "Taux de victoire par mois", fontsize=14, ha="center", va="center")
             for i, month in enumerate(months):
-                ax_row = i // ((len(months) + 1)//2) + 2
+                ax_row = 3 * (i // ((len(months) + 1)//2)) + 4
                 ax_col = i % ((len(months) + 1)//2)
-                month_ax = fig.add_subplot(gs[ax_row, ax_col])
+                month_ax = fig.add_subplot(gs[ax_row:ax_row+2, 2*ax_col:2*ax_col+2])
                 if month not in monthly_winrate[player]:
                     month_ax.pie([1], colors=["white"])
                     month_ax.text(0, 0, "Aucune partie", ha="center", va="center")
@@ -245,7 +249,7 @@ class Visualizer:
             full_placement = []
             for places in placement_list[player].values():
                 full_placement.extend(places)
-            indiv_ax = fig.add_subplot(gs[4:, :])
+            indiv_ax = fig.add_subplot(gs[10:, :])
             indiv_ax.plot(range(1, len(full_placement)+1), full_placement)
             for i, place in enumerate(full_placement):
                 indiv_ax.plot(i+1, place, marker="o", markersize=2, color=placement_colors[int(place)])
@@ -268,14 +272,15 @@ class Visualizer:
                 x_ticks_labels.append(months_labels[month])
             indiv_ax.set_xticks(x_ticks)
             indiv_ax.set_xticklabels(x_ticks_labels, rotation=45)
+            indiv_ax.set_title(f"Résultat des parties du tournoi", fontsize=14, pad=10)
 
-            fig.savefig(os.path.join(player_folder, "winrate.png"))
+            fig.savefig(os.path.join(player_folder, "taux_de_victoire.png"))
             plt.close(fig)
 
     def plot_hand_stats(self, folder: str):
         """
         Creates a winrate graph for each player and saves it as:
-            folder/player_name/hand_stats.png
+            folder/player_name/stats_mains.png
         
         The graph contains:
             - Hand result distribution
@@ -295,6 +300,8 @@ class Visualizer:
 
             result_colors = ["#2EAD69", "#E45756", "#E9B949", "#B0B0B0"]
             winning_colors = ["#E45756", "#4C9BD1"]
+            placement_labels = ["1er", "2e", "3e", "4e"]
+            placement_colors = ["#2EAD69","#F6C453","#E45756"]
 
             fig = plt.figure(figsize=(8, 8))
             gs = fig.add_gridspec(10, 7)
@@ -303,7 +310,11 @@ class Visualizer:
             # Hand overview
             # ==================================================
 
-            overview_ax = fig.add_subplot(gs[:1, :])
+            title_ax = fig.add_subplot(gs[:1, :])
+            title_ax.axis("off")
+            title_ax.text(0.5, 1, f"{player} - Statistiques des mains", fontsize=18, ha="center", va="center")
+
+            overview_ax = fig.add_subplot(gs[1:2, :])
             win = hand_stats[player]['won']['win_prob']
             deal_in = hand_stats[player]['deal_in']['deal_in_prob']
             wall = hand_stats[player]['wall']
@@ -425,8 +436,81 @@ class Visualizer:
             # Mid-game evolution
             # ==================================================
 
-            fig.savefig(os.path.join(player_folder, "hand_stats.png"))
+            evol_ax = fig.add_subplot(gs[7:10, 4:])
+            matrix = np.array(evolution_stats[player], dtype=float)
+            row_sums = matrix.sum(axis=1, keepdims=True)
+            row_sums[row_sums == 0] = 1
+            matrix /= row_sums
+            matrix = np.nan_to_num(matrix, nan=0.0)
+
+            cmap = LinearSegmentedColormap.from_list("placement", placement_colors[::-1])
+            evol_ax.imshow(matrix, cmap=cmap)
+            evol_ax.set_xticks(range(4), labels=placement_labels)
+            evol_ax.set_yticks(range(4), labels=placement_labels)
+            evol_ax.set_xlabel("Place en fin de partie")
+            evol_ax.set_ylabel("Place en milieu de partie")
+
+            for i in range(4):
+                for j in range(4):
+                    evol_ax.text(
+                        j, i,
+                        f"{matrix[i, j]:.0%}",
+                        ha="center",
+                        va="center"
+                    )
+            evol_ax.set_title("Evolution en milieu de partie", fontsize=14, pad=10)
+
+            fig.savefig(os.path.join(player_folder, "stats_mains.png"))
             plt.close(fig)
+
+    def plot_opponent_winrate(self, folder: str):
+        """
+        Creates a winrate confusion matrix for each player against each other
+        and saves it as:
+            folder/taux_de_victoire_global.png
+        
+        The graph contains:
+            - A big confusion matrix showing the winrate of each pair of player
+        """
+        os.makedirs(folder, exist_ok=True)
+        placement_colors = ["#2EAD69","#B0B0B0","#E45756"]
+
+        winrate_stats = self.calc_opponent_winrate()
+        threshold = 15
+        player_names = [player for player in winrate_stats.keys() if winrate_stats[player][player]['total'] >= threshold]
+        matrix = [[0.0 for j in range(len(player_names))] for i in range(len(player_names))]
+        for i1, p1 in enumerate(player_names):
+            for i2, p2 in enumerate(player_names):
+                if winrate_stats[p1][p2]['total'] > 0 and i1 != i2:
+                    matrix[i1][i2] = winrate_stats[p1][p2]['won'] / winrate_stats[p1][p2]['total']
+                else:
+                    matrix[i1][i2] = np.nan
+
+        fig, ax = plt.subplots(figsize=(12, 12))
+        cmap = LinearSegmentedColormap.from_list("winrate", placement_colors[::-1])
+        ax.imshow(matrix, cmap=cmap)
+        ax.set_xticks(range(len(player_names)))
+        ax.set_xticklabels(player_names, rotation=90)
+        ax.set_yticks(range(len(player_names)))
+        ax.set_yticklabels(player_names)
+        for i in range(len(player_names)):
+            for j in range(len(player_names)):
+                if not(np.isnan(matrix[i][j])):
+                    ax.text(
+                        j, i,
+                        f"{matrix[i][j]:.0%}",
+                        fontsize=7,
+                        ha="center",
+                        va="center"
+                    )
+        ax.set_title("Taux de meilleur placement que ses adversaires", fontsize=14, pad=20)
+
+        fig.savefig(os.path.join(folder, "taux_de_victoire_global.png"))
+        plt.close(fig)
+
+
+
+
 
 
 
