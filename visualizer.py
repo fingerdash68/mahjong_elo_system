@@ -1,9 +1,14 @@
+import matplotlib
+# print(matplotlib.get_backend())
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from data import *
 import os
 from pprint import pprint
 from statistics import mean
 from typing import Any
+from math import sqrt
+import numpy as np
 
 class Visualizer:
     def __init__(self, data: Data):
@@ -177,6 +182,8 @@ class Visualizer:
         }, key = lambda x: (x - 9) % 12)
 
         for player in players[:]:
+            print(f"winrate graph for player {player}")
+
             # Create player directory
             player_folder = os.path.join(folder, player)
             os.makedirs(player_folder, exist_ok=True)
@@ -251,7 +258,6 @@ class Visualizer:
             for place in range(4):
                 indiv_ax.axhline(place, color="#999999", linewidth=0.5, linestyle="--")
 
-            indiv_ax.set_xlabel("Nombre de parties")
             nb_games = 0
             x_ticks = []
             x_ticks_labels = []
@@ -266,7 +272,161 @@ class Visualizer:
             fig.savefig(os.path.join(player_folder, "winrate.png"))
             plt.close(fig)
 
+    def plot_hand_stats(self, folder: str):
+        """
+        Creates a winrate graph for each player and saves it as:
+            folder/player_name/hand_stats.png
+        
+        The graph contains:
+            - Hand result distribution
+            - Winning hands statistics
+            - Deal-in hands statistics
+        """
+        hand_stats = self.calc_hand_stats()
+        evolution_stats = self.calc_mid_game_evolution()
+        players = [p.name for p in self.data.players]
+        
+        for player in players[:]:
+            print(f"hand stats graph for player {player}")
 
+            # Create player directory
+            player_folder = os.path.join(folder, player)
+            os.makedirs(player_folder, exist_ok=True)
+
+            result_colors = ["#2EAD69", "#E45756", "#E9B949", "#B0B0B0"]
+            winning_colors = ["#E45756", "#4C9BD1"]
+
+            fig = plt.figure(figsize=(8, 8))
+            gs = fig.add_gridspec(10, 7)
+
+            # ==================================================
+            # Hand overview
+            # ==================================================
+
+            overview_ax = fig.add_subplot(gs[:1, :])
+            win = hand_stats[player]['won']['win_prob']
+            deal_in = hand_stats[player]['deal_in']['deal_in_prob']
+            wall = hand_stats[player]['wall']
+            bar_fractions = [0, win, win + deal_in, win + deal_in + wall, 1]
+            bar_centers = [win/2, win + deal_in/2, win + deal_in + wall/2, (1 + win + deal_in + wall)/2]
+            overview_labels = ["Mahjong", "Donné", "Mur", "Autre"]
+            for i in range(1, len(bar_fractions)):
+                percent = bar_fractions[i] - bar_fractions[i-1]
+                overview_ax.barh(0, percent, left=bar_fractions[i-1], color=result_colors[i-1])
+                overview_ax.text(bar_fractions[i-1] + percent/2, 0, f"{percent*100:.1f}%", ha="center", va="center")
+                overview_ax.axvline(bar_fractions[i], color="#000000", linewidth=0.5, linestyle="-")
+            overview_ax.set_xlim(0, 1)
+            overview_ax.set_yticks([])
+            overview_ax.set_xticks(bar_centers)
+            overview_ax.set_xticklabels(overview_labels)
+            overview_ax.set_title("Répartition des mains", fontsize=14, pad=10)
+
+            # ==================================================
+            # Winning hands
+            # ==================================================
+
+            winning_draw_ax = fig.add_subplot(gs[3:4, :3])
+            self_prob = hand_stats[player]['won']['self_prob']
+            bar_fractions = [0, self_prob, 1]
+            bar_centers = [self_prob/2, (1 + self_prob)/2]
+            self_labels = ["Tiré", "Donné"]
+            for i in range(1, len(bar_fractions)):
+                percent = bar_fractions[i] - bar_fractions[i-1]
+                winning_draw_ax.barh(0, percent, left=bar_fractions[i-1], color=winning_colors[i-1])
+                winning_draw_ax.text(bar_fractions[i-1] + percent/2, 0, f"{percent*100:.1f}%", ha="center", va="center")
+                winning_draw_ax.axvline(bar_fractions[i], color="#000000", linewidth=0.5, linestyle="-")
+            winning_draw_ax.set_xlim(0, 1)
+            winning_draw_ax.set_yticks([])
+            winning_draw_ax.set_xticks(bar_centers)
+            winning_draw_ax.set_xticklabels(self_labels)
+            winning_draw_ax.set_title("Proportion de tirés", fontsize=14, pad=10)
+
+            distrib_ax = fig.add_subplot(gs[5:7, :3])
+            self_values = hand_stats[player]['won']['self_list']
+            direct_values = hand_stats[player]['won']['deal_in_list']
+            if self_values or direct_values:
+                start_x = min(self_values + direct_values)
+                end_x = max(self_values + direct_values)
+                bins = list(range(start_x, end_x+2))
+            else:
+                start_x, end_x, bins = 8, 88, [8, 88]
+            distrib_ax.hist(
+                [self_values, direct_values],
+                bins=bins,
+                stacked=True,
+                rwidth=0.8,
+                color=winning_colors
+            )
+            alpha = 0.1
+            distrib_ax.set_xscale("function", functions=(lambda x: x**alpha, lambda x: x**(1/alpha)))
+            default_ticks = [8, 12, 16, 20, 24, 32, 48, 64, 88, 120, 150]
+            x_ticks = [tick for tick in default_ticks if tick >= start_x and tick <= end_x]
+            if x_ticks: x_ticks.pop()
+            x_ticks.append(end_x)
+            distrib_ax.set_xticks(x_ticks)
+            distrib_ax.set_title("Répartition des mahjongs", fontsize=14, pad=10)
+
+            stats_ax = fig.add_subplot(gs[7:8, :3])
+            stats_ax.axis("off")
+            highest_win = np.max(self_values + direct_values) if len(self_values + direct_values) > 0 else 0
+            mean_win = np.mean(self_values + direct_values) if len(self_values + direct_values) > 0 else 0
+            std_win = np.std(self_values + direct_values) if len(self_values + direct_values) > 0 else 0
+            stats_ax.text(
+                0.5, 0.0,
+                f"Max: {highest_win} pts\n"
+                f"Moy: {mean_win:.1f} pts\n"
+                f"Ecart-type: {std_win:.1f} pts",
+                ha="center",
+                va="center"
+            )
+
+            # ==================================================
+            # Deal-in hands
+            # ==================================================
+
+            distrib_ax = fig.add_subplot(gs[3:5, 4:])
+            deal_in_values = hand_stats[player]['deal_in']['value_list']
+            if deal_in_values:
+                start_x = min(deal_in_values)
+                end_x = max(deal_in_values)
+                bins = list(range(start_x, end_x+2))
+            else:
+                start_x, end_x, bins = 8, 88, [8, 88]
+            distrib_ax.hist(
+                deal_in_values,
+                bins=bins,
+                rwidth=0.8,
+                color=winning_colors[1]
+            )
+            alpha = 0.1
+            distrib_ax.set_xscale("function", functions=(lambda x: x**alpha, lambda x: x**(1/alpha)))
+            default_ticks = [8, 12, 16, 20, 24, 32, 48, 64, 88, 120, 150]
+            x_ticks = [tick for tick in default_ticks if tick >= start_x and tick <= end_x]
+            if x_ticks: x_ticks.pop()
+            x_ticks.append(end_x)
+            distrib_ax.set_xticks(x_ticks)
+            distrib_ax.set_title("Répartition des donnés", fontsize=14, pad=10)
+
+            stats_ax = fig.add_subplot(gs[5:6, 4:])
+            stats_ax.axis("off")
+            highest_deal_in = np.max(deal_in_values) if len(deal_in_values) > 0 else 0
+            mean_deal_in = np.mean(deal_in_values) if len(deal_in_values) > 0 else 0
+            std_deal_in = np.std(deal_in_values) if len(deal_in_values) > 0 else 0
+            stats_ax.text(
+                0.5, 0.0,
+                f"Max: {highest_deal_in} pts\n"
+                f"Moy: {mean_deal_in:.1f} pts\n"
+                f"Ecart-type: {std_deal_in:.1f} pts",
+                ha="center",
+                va="center"
+            )
+
+            # ==================================================
+            # Mid-game evolution
+            # ==================================================
+
+            fig.savefig(os.path.join(player_folder, "hand_stats.png"))
+            plt.close(fig)
 
 
 
@@ -477,6 +637,8 @@ class Visualizer:
             - proportion of self-drawn hands among won hands (alias 'self_prob')
             - average value of hand (alias 'avg_value')
             - list of values (alias 'value_list')
+            - list of dealt-in values (alias 'deal_in_list')
+            - list of self-drawn values (alias 'self_list')
           - proportion of walls (alias 'wall'), format : float
           - dealt-in hands (alias 'deal_in'), format : dict
             - proportion of deal-in (alias 'deal_in_prob')
@@ -489,7 +651,7 @@ class Visualizer:
         players = [p.name for p in self.data.players]
         for p in players:
             stats[p] = {
-                'won': {'value_list': [], 'self_prob': 0},
+                'won': {'value_list': [], 'self_prob': 0, 'deal_in_list': [], 'self_list': []},
                 'wall': 0,
                 'deal_in': {'value_list': []},
                 'total': 0
@@ -507,6 +669,9 @@ class Visualizer:
                             stats[player_name]['won']['value_list'].append(rnd.hand_points)
                             if rnd.discarder is None:
                                 stats[player_name]['won']['self_prob'] += 1
+                                stats[player_name]['won']['self_list'].append(rnd.hand_points)
+                            else:
+                                stats[player_name]['won']['deal_in_list'].append(rnd.hand_points)
                         elif rnd.discarder == alias:
                             stats[player_name]['deal_in']['value_list'].append(rnd.hand_points)
                         stats[player_name]['total'] += 1
@@ -569,17 +734,28 @@ class Visualizer:
             if game.rounds is not None:
                 scores = {}
                 for player_name in game.players:
-                    scores[player_name] = 0
+                    scores[self.data.aliases[player_name]] = 0
                 for rnd in game.rounds[:len(game.rounds)//2]:
-                    if rnd.winner is not None:
-                        for player_name in game.players:
-                            if player_name != rnd.winner:
+                    winner = rnd.winner
+                    discarder = rnd.discarder
+                    if winner is not None:
+                        winner = self.data.aliases[winner]
+                    if discarder is not None:
+                        discarder = self.data.aliases[discarder]
+                    if winner is not None:
+                        for alias in game.players:
+                            player_name = self.data.aliases[alias]
+                            if player_name != winner:
                                 scores[player_name] -= 8
-                                scores[rnd.winner] += 8
-                            if player_name == rnd.discarder or rnd.discarder is None:
+                                scores[winner] += 8
+                            if player_name == discarder or discarder is None:
                                 scores[player_name] -= rnd.hand_points
-                                scores[rnd.winner] += rnd.hand_points
-                score_list = [scores[p] for p in game.players]
+                                scores[winner] += rnd.hand_points
+                    if rnd.penalties is not None:
+                        for alias, pen in rnd.penalties.items():
+                            name = self.data.aliases[alias]
+                            scores[name] += pen
+                score_list = [scores[self.data.aliases[p]] for p in game.players]
                 for wind in range(4):
                     player_name = self.data.aliases[game.players[wind]]
                     mid_places = self._calc_placement_list_from_scores(score_list[wind], score_list)

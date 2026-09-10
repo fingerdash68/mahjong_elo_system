@@ -25,7 +25,8 @@ visualizer = Visualizer(data)
 # pprint(visualizer.calc_hand_stats())
 # pprint(visualizer.calc_opponent_winrate())
 # pprint(visualizer.calc_mid_game_evolution())
-visualizer.plot_winrate("stats")
+# visualizer.plot_winrate("stats")
+visualizer.plot_hand_stats("stats")
 quit()
 
 continuer = True
