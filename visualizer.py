@@ -10,6 +10,7 @@ from statistics import mean
 from typing import Any
 from math import sqrt
 import numpy as np
+import datetime as dt
 
 class Visualizer:
     def __init__(self, data: Data):
@@ -860,3 +861,29 @@ class Visualizer:
             if sorted_scores[i] == score:
                 places.append(i)
         return places
+
+
+
+
+    def extract_games_from_day_and_player(self, start_day: dt.date|None = None, end_day: dt.date|None = None, player_name: str|None = None):
+        """
+        Returns the list of all games played in the timeframe by the given player given sorted by time
+        Params :
+        - start_day (optional) : start of the interval, timeframe ignored if start_day not given
+        - end_day (optional) : end of the interval, if not given defaults to start_day
+        - player_name (optional) : name of the player we want the game from, ignored if not given
+        """
+        if start_day is None:
+            start_day = dt.date(2000, 1, 1)
+            end_day = dt.date(3000, 1, 1)
+        if end_day is None:
+            end_day = start_day
+        games = []
+        for game in self.data.games:
+            date = game.date.date()
+            if start_day <= date and date <= end_day:
+                aliases = [self.data.aliases[name] for name in game.players]
+                if player_name is None or player_name in aliases:
+                    games.append(game)
+        games.sort(key=lambda x : x.date)
+        return games

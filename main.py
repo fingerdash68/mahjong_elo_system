@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 from pprint import pprint
 import matplotlib.pyplot as plt
+import datetime as dt
 
 DATA_SAVE_FILE = "./games.json"
 IMPORT_FOLDER = "./import_files/"
@@ -107,6 +108,7 @@ while continuer:
             (3) Enregistrer ema
             (4) Nombre de rencontres par joueur
             (5) Stats nemesis
+            (6) Extraire par date ou joueur
         """)
         choix2 = int(input())
         if choix2 == 1:
@@ -163,6 +165,26 @@ while continuer:
                 print()
                 print_nemesis(stat)
                 print()
+        elif choix2 == 6:
+            start_day = input("Entrez la date de depart (jj/mm/yy) : ")
+            end_day = input("Entrez la date de fin (jj/mm/yy) : ")
+            player_name = input("Entrez le nom du joueur : ")
+            if start_day == "":
+                start_day = None
+            else:
+                start_day = dt.datetime.strptime(start_day, '%d/%m/%y').date()
+            if end_day == "":
+                end_day = None
+            else:
+                end_day = dt.datetime.strptime(end_day, '%d/%m/%y').date()
+            if player_name == "":
+                player_name = None
+            games = visualizer.extract_games_from_day_and_player(start_day, end_day, player_name)
+            def print_game(game):
+                print(str(game.date) + " : " + " / ".join([data.aliases[name] for name in game.players]))
+            print(f"{len(games)} parties trouvees.")
+            for game in games:
+                print_game(game)
     elif choix == 8:
         player_name = input("Entrez le nom du joueur a supprimer : ")
         err_code, err_mess = loader.remove_player(player_name)
