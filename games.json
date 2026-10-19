@@ -211,166 +211,166 @@
                 {
                     "winner": null,
                     "discarder": null,
-                    "hand_points": "0",
+                    "hand_points": 0,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": "marc",
-                    "hand_points": "14",
+                    "hand_points": 14,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": null,
                     "discarder": null,
-                    "hand_points": "0",
+                    "hand_points": 0,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": null,
-                    "hand_points": "21",
+                    "hand_points": 21,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": null,
-                    "hand_points": "15",
+                    "hand_points": 15,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": "delphine",
-                    "hand_points": "15",
+                    "hand_points": 15,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": "delphine",
-                    "hand_points": "12",
+                    "hand_points": 12,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "delphine",
                     "discarder": "yiting",
-                    "hand_points": "13",
+                    "hand_points": 13,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": "marc",
-                    "hand_points": "26",
+                    "hand_points": 26,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "marc",
                     "discarder": "jean michel",
-                    "hand_points": "27",
+                    "hand_points": 27,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": null,
-                    "hand_points": "39",
+                    "hand_points": 39,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "jean michel",
                     "discarder": "yiting",
-                    "hand_points": "24",
+                    "hand_points": 24,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "yiting",
                     "discarder": "marc",
-                    "hand_points": "19",
+                    "hand_points": 19,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": "jean michel",
                     "discarder": null,
-                    "hand_points": "14",
+                    "hand_points": 14,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 },
                 {
                     "winner": null,
                     "discarder": null,
-                    "hand_points": "0",
+                    "hand_points": 0,
                     "penalties": {
-                        "delphine": "0",
-                        "marc": "0",
-                        "yiting": "0",
-                        "jean michel": "0"
+                        "delphine": 0,
+                        "marc": 0,
+                        "yiting": 0,
+                        "jean michel": 0
                     }
                 }
             ]

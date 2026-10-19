@@ -169,6 +169,7 @@ while continuer:
             start_day = input("Entrez la date de depart (jj/mm/yy) : ")
             end_day = input("Entrez la date de fin (jj/mm/yy) : ")
             player_name = input("Entrez le nom du joueur : ")
+            with_detail = input("Avec le detail ? (y/n) ") == "y"
             if start_day == "":
                 start_day = None
             else:
@@ -179,12 +180,21 @@ while continuer:
                 end_day = dt.datetime.strptime(end_day, '%d/%m/%y').date()
             if player_name == "":
                 player_name = None
-            games = visualizer.extract_games_from_day_and_player(start_day, end_day, player_name)
-            def print_game(game):
+            games_detail = visualizer.extract_games_from_day_and_player(start_day, end_day, player_name, with_detail)
+            def print_game(game, detail):
                 print(str(game.date) + " : " + " / ".join([data.aliases[name] for name in game.players]))
-            print(f"{len(games)} parties trouvees.")
-            for game in games:
-                print_game(game)
+                if detail is not None:
+                    names = list(detail["elo_before"].keys())
+                    print("\tNom\t\tPlace\t\tElo diff\tPoints attendus\tElo avant\tElo gain\tElo apres")
+                    for name in names:
+                        print(f"\t{name + ("\t" if len(name) < 8 else "")}\t", end="")
+                        place = detail["place"][name]
+                        print(f"{str(place) + ("er" if place == 1 else "e")}\t\t", end="")
+                        print(f"{detail["elo_diff"][name]:.1f}\t\t{detail["awaited_perf"][name]:.2f}\t\t{detail["elo_before"][name]:.1f}\t\t{detail["elo_gain"][name]:.1f}\t\t{detail["elo_after"][name]:.1f}")
+                    print()
+            print(f"{len(games_detail)} parties trouvees.")
+            for game_detail in games_detail:
+                print_game(game_detail[0], game_detail[1])
     elif choix == 8:
         player_name = input("Entrez le nom du joueur a supprimer : ")
         err_code, err_mess = loader.remove_player(player_name)

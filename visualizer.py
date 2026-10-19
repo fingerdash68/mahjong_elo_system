@@ -865,25 +865,41 @@ class Visualizer:
 
 
 
-    def extract_games_from_day_and_player(self, start_day: dt.date|None = None, end_day: dt.date|None = None, player_name: str|None = None):
+    def extract_games_from_day_and_player(self, start_day: dt.date|None = None, end_day: dt.date|None = None, player_name: str|None = None, with_detail: bool = False):
         """
         Returns the list of all games played in the timeframe by the given player given sorted by time
         Params :
         - start_day (optional) : start of the interval, timeframe ignored if start_day not given
         - end_day (optional) : end of the interval, if not given defaults to start_day
         - player_name (optional) : name of the player we want the game from, ignored if not given
+        - with_detail (default = False) : adds a field in the return part with all the elo change for each game
+        Returns :
+        a list of tuple (game, detail)
+        detail is an dict containing the elo change stats (None if with_detail is False)
         """
         if start_day is None:
             start_day = dt.date(2000, 1, 1)
             end_day = dt.date(3000, 1, 1)
         if end_day is None:
             end_day = start_day
-        games = []
-        for game in self.data.games:
+        if with_detail:
+            elo_dict = self.data._get_readable_elo_dict()
+        games_detail = []
+        for igame, game in enumerate(self.data.games):
             date = game.date.date()
             if start_day <= date and date <= end_day:
                 aliases = [self.data.aliases[name] for name in game.players]
                 if player_name is None or player_name in aliases:
-                    games.append(game)
-        games.sort(key=lambda x : x.date)
-        return games
+                    detail = None
+                    if with_detail:
+                        datestr = game.date.isoformat() + "/" + str(igame)
+                        detail = elo_dict[datestr]
+                        del detail["elo"]
+                        detail["elo_after"] = {}
+                        detail["place"] = {}
+                        for name in detail["elo_before"]:
+                            detail["elo_after"][name] = detail["elo_before"][name] + detail["elo_gain"][name]
+                            detail["place"][name] = 4 - detail["points"][name]
+                    games_detail.append((game, detail))
+        games_detail.sort(key=lambda x : x[0].date)
+        return games_detail

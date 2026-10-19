@@ -323,7 +323,7 @@ class Data:
         elo_dict = {}
         for igame in range(len(self.games)):
             game = self.games[igame]
-            datestr = game.date.isoformat()
+            datestr = game.date.isoformat() + "/" + str(igame)
             elo_dict[datestr] = {"elo": self.elo[igame]}
             elo_dict[datestr]['elo_before'] = {}
             elo_dict[datestr]['elo_diff'] = {}
