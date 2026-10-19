@@ -1,6 +1,7 @@
 from data import *
 from loaders import *
 from visualizer import *
+from utils import *
 from pathlib import Path
 import json
 from pprint import pprint
@@ -40,9 +41,11 @@ while continuer:
         (5) Afficher les elos
         (6) Afficher les emas
         (7) Stats speciales
-        (8) Supprimer un joueur
-        (9) Afficher la liste des joueurs
-        (10) Terminal de commandes (dev only)
+        (8) Ajouter une partie manuellement
+        (9) Supprimer une partie
+        (10) Supprimer un joueur
+        (11) Afficher la liste des joueurs
+        (99) Terminal de commandes (dev only)
         (0) Quitter
     """)
     choix = int(input())
@@ -113,15 +116,6 @@ while continuer:
         choix2 = int(input())
         if choix2 == 1:
             freqs = visualizer.calc_winning_wind_full_game()
-            def print_freqs(freq):
-                winds = ['East', 'South', 'West', 'North', 'Total']
-                places = ['1st', '2nd', '3rd', '4th']
-                for wind in range(len(winds)):
-                    print(f"\t{winds[wind]} : ", end="")
-                    for place in range(len(places)):
-                        if place != 0: print(", ", end="")
-                        print(f"{places[place]} : {freq[wind][place][0]} ({round(100*freq[wind][place][1], 1)}%)", end="")
-                    print()
             for p in data.players:
                 print(p.name, ":")
                 print_freqs(freqs[p.name])
@@ -137,29 +131,11 @@ while continuer:
                 json.dump(data.ema, f, indent=4)
         elif choix2 == 4:
             counts = visualizer.calc_nb_encounters()
-            def print_counts(count):
-                nb_prints = 0
-                for p, val in dict(sorted(count.items(), key=lambda x: x[1], reverse=True)).items():
-                    if val > 0:
-                        print(f"\t{p} : {val}", end="\t")
-                        nb_prints += 1
-                        if nb_prints%4 == 0:
-                            print()
-                if nb_prints%4 != 0: print()
             for p, count in counts.items():
                 print(f"Rencontres de {p} :")
                 print_counts(count)
         elif choix2 == 5:
             stats = visualizer.calc_nemesis()
-            def print_nemesis(stat):
-                nb_prints = 0
-                for p, val in dict(sorted(stat.items(), key=lambda x: (x[1]['smoothed_rate'], x[1]['win_rate'], -x[1]['nb_total']), reverse=False)).items():
-                    if val['nb_total'] > 0:
-                        print(f"\t{p} : {val['nb_wins']:.0f}/{val['nb_total']:.0f} ({100 * val['win_rate']:.1f}%)", end="\t")
-                        nb_prints += 1
-                        if nb_prints%3 == 0:
-                            print()
-                if nb_prints%4 != 0: print()
             for p, stat in stats.items():
                 print(f"Taux de victoire de {p} :")
                 print()
@@ -181,28 +157,38 @@ while continuer:
             if player_name == "":
                 player_name = None
             games_detail = visualizer.extract_games_from_day_and_player(start_day, end_day, player_name, with_detail)
-            def print_game(game, detail):
-                print(str(game.date) + " : " + " / ".join([data.aliases[name] for name in game.players]))
-                if detail is not None:
-                    names = list(detail["elo_before"].keys())
-                    print("\tNom\t\tPlace\t\tElo diff\tPoints attendus\tElo avant\tElo gain\tElo apres")
-                    for name in names:
-                        print(f"\t{name + ("\t" if len(name) < 8 else "")}\t", end="")
-                        place = detail["place"][name]
-                        print(f"{str(place) + ("er" if place == 1 else "e")}\t\t", end="")
-                        print(f"{detail["elo_diff"][name]:.1f}\t\t{detail["awaited_perf"][name]:.2f}\t\t{detail["elo_before"][name]:.1f}\t\t{detail["elo_gain"][name]:.1f}\t\t{detail["elo_after"][name]:.1f}")
-                    print()
             print(f"{len(games_detail)} parties trouvees.")
             for game_detail in games_detail:
-                print_game(game_detail[0], game_detail[1])
+                print_game(data, game_detail[0], game_detail[1])
     elif choix == 8:
+        date = input("Date et horaire de la partie (jj/mm/yy HH:MM:SS) : ")
+        date = dt.datetime.strptime(date, "%d/%m/%y %H:%M:%S")
+        players = []
+        end_points = []
+        for wind in ["Est", "Sud", "Ouest", "Nord"]:
+            players.append(input(f"Nom du joueur {wind} : "))
+            end_points.append(int(input(f"Points du joueur {wind} : ")))
+        loader._try_to_add_game(players, end_points, date, [])
+    elif choix == 9:
+        for igame, game in enumerate(data.games):
+            print(f"{igame}) ", end="")
+            print_game(data, game)
+        rem_game_nb = int(input("Entrez le numero de la partie a supprimer : "))
+        if rem_game_nb < 0 or rem_game_nb >= len(data.games):
+            print("Numero invalide")
+        else:
+            game = data.games[rem_game_nb]
+            print("Partie supprimee : ", end="")
+            print_game(data, game)
+            data.remove_games([rem_game_nb])
+    elif choix == 10:
         player_name = input("Entrez le nom du joueur a supprimer : ")
         err_code, err_mess = loader.remove_player(player_name)
         if err_code != 0:
             print("Erreur :", err_mess)
-    elif choix == 9:
+    elif choix == 11:
         visualizer.print_players()
-    elif choix == 10:
+    elif choix == 99:
         commands = []
         while True:
             comm = input("> ")
