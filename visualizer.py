@@ -184,6 +184,8 @@ class Visualizer:
         }, key = lambda x: (x - 9) % 12)
 
         for player in players[:]:
+            if len(placement_list[player]) == 0:
+                continue
             print(f"winrate graph for player {player}")
 
             # Create player directory
@@ -293,6 +295,8 @@ class Visualizer:
         players = [p.name for p in self.data.players]
         
         for player in players[:]:
+            if player not in hand_stats:
+                continue
             print(f"hand stats graph for player {player}")
 
             # Create player directory

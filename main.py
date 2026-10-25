@@ -27,9 +27,9 @@ visualizer = Visualizer(data)
 # pprint(visualizer.calc_hand_stats())
 # pprint(visualizer.calc_opponent_winrate())
 # pprint(visualizer.calc_mid_game_evolution())
-# visualizer.plot_winrate("stats_2025-26")
-# visualizer.plot_hand_stats("stats_2025-26")
-# visualizer.plot_opponent_winrate("stats_2025-26")
+# visualizer.plot_winrate("stats")
+# visualizer.plot_hand_stats("stats")
+# visualizer.plot_opponent_winrate("stats")
 
 continuer = True
 while continuer:
@@ -112,6 +112,7 @@ while continuer:
             (4) Nombre de rencontres par joueur
             (5) Stats nemesis
             (6) Extraire par date ou joueur
+            (7) Generer graphiques de stats
         """)
         choix2 = int(input())
         if choix2 == 1:
@@ -160,6 +161,10 @@ while continuer:
             print(f"{len(games_detail)} parties trouvees.")
             for game_detail in games_detail:
                 print_game(data, game_detail[0], game_detail[1])
+        elif choix2 == 7:
+            visualizer.plot_winrate("stats")
+            visualizer.plot_hand_stats("stats")
+            visualizer.plot_opponent_winrate("stats")
     elif choix == 8:
         date = input("Date et horaire de la partie (jj/mm/yy HH:MM:SS) : ")
         date = dt.datetime.strptime(date, "%d/%m/%y %H:%M:%S")
