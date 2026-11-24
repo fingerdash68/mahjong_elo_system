@@ -106,7 +106,7 @@ class Visualizer:
 
             ema_table = []
             for name, stats in ema_stats.items():
-                if stats['rank'] != -1 or True: # Filter
+                if stats['total ema'] != 0 or False: # Filter
                     ema_table.append([
                         name,
                         round(stats['elo'], 1),
